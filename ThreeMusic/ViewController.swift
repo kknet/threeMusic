@@ -8,34 +8,57 @@
 
 import UIKit
 import MJRefresh
-
-class ViewController: UIViewController {
+import AVFoundation
+class ViewController: UIViewController,MusicPlayView{
+ 
+    
+    
     private var musicPresenter =  MusicPresenter<ViewController>()
     let mjHeaderView = MJRefreshNormalHeader()
     let mjFooterView = MJRefreshAutoNormalFooter()
- 
+
+    var player1 = AVPlayer()
+    var playerItem1:AVPlayerItem!
     var arrMusicList : [Modelclass]!
     var serchString:String  = "vi"
     var  limit  = 1
     
+    
+    var presenter:PlayPresenter? = nil
+    
+    var model : Modelclass? = nil
+    
+    
+    
 
+    @IBOutlet weak var playView: UIView!
     @IBOutlet weak var playTableView: UITableView!
     @IBOutlet weak var serchTextField: UITextField!
+    
+    @IBOutlet weak var playButton: UIButton!
+    
+    @IBOutlet weak var playLabel: UILabel!
+    @IBOutlet weak var playSlider: UISlider!
     override func viewDidLoad() {
-     self.musicPresenter.initial(self)
-
+        self.musicPresenter.initial(self)
+        
+        
         reloadData(serch: "vi", page: 1)
-        serchTextField.delegate = self as! UITextFieldDelegate
-        playTableView.dataSource = self as! UITableViewDataSource
-        playTableView.delegate = self as! UITableViewDelegate
+        serchTextField.delegate = self as UITextFieldDelegate
+        playTableView.dataSource = self as UITableViewDataSource
+        playTableView.delegate = self as UITableViewDelegate
         playTableView.register(UINib.init(nibName: "MyTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "mycell")
         mjHeaderView.setRefreshingTarget(self, refreshingAction: #selector(self.headerRefresh))
-              playTableView.mj_header = mjHeaderView
-              mjFooterView.setRefreshingTarget(self, refreshingAction: #selector(self.footerRefresh))
-              playTableView.mj_footer = mjFooterView
+        playTableView.mj_header = mjHeaderView
+        mjFooterView.setRefreshingTarget(self, refreshingAction: #selector(self.footerRefresh))
+        playTableView.mj_footer = mjFooterView
+        
+        
+        self.model = Modelclass.init()
+               
+        presenter = PlayPresenter(view: self, person: self.model!)
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     func reloadData(serch:String,page:Int) {
        // 请求网络
@@ -45,15 +68,16 @@ class ViewController: UIViewController {
      }
      
     // MARK:-EventTableView_header and footer
+    @objc func Refresh(){
+        
+    }
      @objc func headerRefresh(){
             print("下拉刷新")
-        
          self.playTableView.mj_header.endRefreshing()
          self.playTableView.mj_footer.resetNoMoreData()
-        limit = 1
-        reloadData(serch: serchString, page: limit)
-//
-//         musicListplay.loadData(serchString: serchString, startNum: 0)
+         limit = 1
+         reloadData(serch: serchString, page: limit)
+
      }
      @objc func footerRefresh(){
          print("上拉刷新")
@@ -68,21 +92,36 @@ class ViewController: UIViewController {
     }
     
 }
+    func Musicplayer(player: String) {
+        print("player==== \(player)")
+////
+//        if player != nil {
+//            print("\(player)")
+//            let playurl = player
+//            print("\(playurl)")
+//        }
+        playerItem1 = AVPlayerItem(url:URL(string:self.model!.previewUrl!)!)
+            self.player1 = AVPlayer(playerItem:playerItem1)
+            player1.play()
+    
+ //
+//        playerItem1 = AVPlayerItem(url:URL(string:player)!)
+//        self.player1 = AVPlayer(playerItem:playerItem1)
+  //      player1.play()
+//
+  }
+    
 
 }
 extension ViewController: MusicProtocol {
     
-    
     func onGetCacheSuccess(model: [Modelclass]?) {
         
         arrMusicList = model
-        
         DispatchQueue.main.async(execute: {
-           
             self.playTableView.mj_footer.endRefreshing()
-         
             self.playTableView.reloadData()
-               })
+         })
     }
     
     func onGetCacheFailure(error: Error) {
@@ -100,6 +139,11 @@ extension ViewController: UITableViewDelegate {
 //        self.listTableView.mj_footer.resetNoMoreData()
 //
 //        self.playNewMusic(playurl: self.playModel.previewUrl!)
+     
+        self.model = arrMusicList![indexPath.row]
+        presenter = PlayPresenter(view: self, person: self.model!)
+        self.presenter?.showMusicplay()
+
     }
     
 }

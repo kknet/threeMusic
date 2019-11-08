@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC321D2375015300159117 /* MyTableViewCell.xib */; };
 		0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC321E2375015300159117 /* MyTableViewCell.swift */; };
+		0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC32332375617F00159117 /* PlayPresenter.swift */; };
+		0AEC323623757D7500159117 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC323523757D7500159117 /* PlayModel.swift */; };
 		2AB05AC27D0EB5EC97A5EC5E /* Pods_ThreeMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F04B8FFADE8BD4588BF1777 /* Pods_ThreeMusic.framework */; };
 		BEFB1360025BAE9A098756AA /* Pods_ThreeMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEE3A2A96B2ECA7928BAC5F /* Pods_ThreeMusicTests.framework */; };
 		C337905948DE7692F92AF899 /* Pods_ThreeMusic_ThreeMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB8D8CC924319CAA053A021 /* Pods_ThreeMusic_ThreeMusicUITests.framework */; };
@@ -22,7 +24,6 @@
 		D55C82CA23742D2700D8C78F /* ThreeMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82C923742D2700D8C78F /* ThreeMusicTests.swift */; };
 		D55C82D523742D2700D8C78F /* ThreeMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82D423742D2700D8C78F /* ThreeMusicUITests.swift */; };
 		D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82E623742ED700D8C78F /* MusicModel.swift */; };
-		D55C82E923742F6700D8C78F /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82E823742F6700D8C78F /* MusicData.swift */; };
 		D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82EA2374342E00D8C78F /* MusicPresenter.swift */; };
 		D55C82ED237437EA00D8C78F /* MusicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82EC237437EA00D8C78F /* MusicDelegate.swift */; };
 		D55C82F4237474C300D8C78F /* HTTPResponProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82F1237474C200D8C78F /* HTTPResponProtocol.swift */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		0AEC321D2375015300159117 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		0AEC321E2375015300159117 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		0AEC32332375617F00159117 /* PlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPresenter.swift; sourceTree = "<group>"; };
+		0AEC323523757D7500159117 /* PlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayModel.swift; sourceTree = "<group>"; };
 		0F04B8FFADE8BD4588BF1777 /* Pods_ThreeMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreeMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E60ADA15EC99204CD22684 /* Pods-ThreeMusic-ThreeMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeMusic-ThreeMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-ThreeMusic-ThreeMusicUITests/Pods-ThreeMusic-ThreeMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A28231633FAC6FF7370EDA5 /* Pods-ThreeMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeMusicTests.release.xcconfig"; path = "Target Support Files/Pods-ThreeMusicTests/Pods-ThreeMusicTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +78,6 @@
 		D55C82D423742D2700D8C78F /* ThreeMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeMusicUITests.swift; sourceTree = "<group>"; };
 		D55C82D623742D2700D8C78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55C82E623742ED700D8C78F /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
-		D55C82E823742F6700D8C78F /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
 		D55C82EA2374342E00D8C78F /* MusicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPresenter.swift; sourceTree = "<group>"; };
 		D55C82EC237437EA00D8C78F /* MusicDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDelegate.swift; sourceTree = "<group>"; };
 		D55C82F1237474C200D8C78F /* HTTPResponProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponProtocol.swift; path = "../../Swift-MVP/MVPDemo/HTTPResponProtocol.swift"; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 				B4FCDFE0DE08F91D7BBBFDA2 /* Pods-ThreeMusicTests.debug.xcconfig */,
 				2A28231633FAC6FF7370EDA5 /* Pods-ThreeMusicTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,7 +172,8 @@
 				D55C82EA2374342E00D8C78F /* MusicPresenter.swift */,
 				D55C82EC237437EA00D8C78F /* MusicDelegate.swift */,
 				D55C82E623742ED700D8C78F /* MusicModel.swift */,
-				D55C82E823742F6700D8C78F /* MusicData.swift */,
+				0AEC32332375617F00159117 /* PlayPresenter.swift */,
+				0AEC323523757D7500159117 /* PlayModel.swift */,
 				D55C82E423742D7000D8C78F /* Presenters */,
 				D55C82E523742D8B00D8C78F /* Views */,
 				D55C82E323742D5200D8C78F /* Models */,
@@ -490,7 +492,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */,
+				0AEC323623757D7500159117 /* PlayModel.swift in Sources */,
 				D55C82BA23742D2500D8C78F /* ThreeMusic.xcdatamodeld in Sources */,
+				0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */,
 				D55C82ED237437EA00D8C78F /* MusicDelegate.swift in Sources */,
 				D55C82F4237474C300D8C78F /* HTTPResponProtocol.swift in Sources */,
 				D55C82F5237474C300D8C78F /* Presenter.swift in Sources */,
@@ -498,7 +502,6 @@
 				D55C82B423742D2500D8C78F /* ViewController.swift in Sources */,
 				D55C82F6237474C300D8C78F /* HTTPClient.swift in Sources */,
 				D55C82B023742D2500D8C78F /* AppDelegate.swift in Sources */,
-				D55C82E923742F6700D8C78F /* MusicData.swift in Sources */,
 				D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */,
 				D55C82B223742D2500D8C78F /* SceneDelegate.swift in Sources */,
 			);

@@ -27,10 +27,6 @@ struct MusicPresenter <U> where U: MusicProtocol {
         return musicList
     }()
     
-    
-    
-    
-
     func getCache(by term:String, by limit : Int) {
       
     // 网络请求 ...
@@ -41,12 +37,15 @@ struct MusicPresenter <U> where U: MusicProtocol {
 extension MusicPresenter: HTTPResponProtocol {
     
   func onSuccess(object: Dictionary<String, Any>) {
+    
     view?.onGetCacheSuccess(model: Modelclass.fromJSON(object))
     
   }
   
   func onFailure(error: Error) {
+    
     print(error)
-  }
+
+    }
 }
 
