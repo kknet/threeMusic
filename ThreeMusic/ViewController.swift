@@ -17,16 +17,16 @@ class ViewController: UIViewController,MusicPlayView{
     let mjHeaderView = MJRefreshNormalHeader()
     let mjFooterView = MJRefreshAutoNormalFooter()
 
-    var player1 = AVPlayer()
+    var avPlayer = PlayerModel()
     var playerItem1:AVPlayerItem!
     var arrMusicList : [Modelclass]!
     var serchString:String  = "vi"
     var  limit  = 1
     
     
-    var presenter:PlayPresenter? = nil
+    var presenter : PlayPresenter!
     
-    var model : Modelclass? = nil
+    var model : Modelclass!
     
     
     
@@ -39,9 +39,11 @@ class ViewController: UIViewController,MusicPlayView{
     
     @IBOutlet weak var playLabel: UILabel!
     @IBOutlet weak var playSlider: UISlider!
+
     override func viewDidLoad() {
         self.musicPresenter.initial(self)
-        
+        presenter = PlayPresenter(view: self)
+
         
         reloadData(serch: "vi", page: 1)
         serchTextField.delegate = self as UITextFieldDelegate
@@ -52,11 +54,13 @@ class ViewController: UIViewController,MusicPlayView{
         playTableView.mj_header = mjHeaderView
         mjFooterView.setRefreshingTarget(self, refreshingAction: #selector(self.footerRefresh))
         playTableView.mj_footer = mjFooterView
-        
+        playView.isHidden = true
         
         self.model = Modelclass.init()
                
-        presenter = PlayPresenter(view: self, person: self.model!)
+        presenter = PlayPresenter(view: self)
+        
+             NotificationCenter.default.addObserver(self, selector: #selector(finishedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.playerItem)
         super.viewDidLoad()
 
     }
@@ -66,7 +70,24 @@ class ViewController: UIViewController,MusicPlayView{
         self.musicPresenter.getCache(by: serch, by: page)
         
      }
+    @IBAction func playSliderChanged(_ sender: Any) {
+        
+        let seconds : Int64 = Int64(self.playSlider.value)
+        avPlayer.playBackSliderValueChanged(seconds: seconds)
+        
+    }
+    @IBAction func playButtonCiclk(_ sender: Any) {
+
+        self.presenter.updataplay()
      
+        if self.presenter.model.isPlay {
+            avPlayer.player.play()
+              } else {
+            avPlayer.player.pause()
+              }
+        playButton .setImage( UIImage(named:self.presenter.playButtonColor), for: .normal)
+
+     }
     // MARK:-EventTableView_header and footer
     @objc func Refresh(){
         
@@ -83,32 +104,39 @@ class ViewController: UIViewController,MusicPlayView{
          print("上拉刷新")
          if limit >= 8{
          playTableView.mj_footer.endRefreshingWithNoMoreData()
-         
          }else{
-            
          limit += 1
-            
          reloadData(serch: serchString, page: limit)
     }
-    
+       
 }
+    @objc func finishedPlaying(myNotification:NSNotification) {
+                     print("播放完毕!")
+                     self.playView .isHidden = true
+                     self.playButton .setImage(UIImage(named: "ic_p_play"),for: .normal)
+                     self.avPlayer.stopPlayerItem()
+                     }
+       
+    
+    
     func Musicplayer(player: String) {
         print("player==== \(player)")
-////
-//        if player != nil {
-//            print("\(player)")
-//            let playurl = player
-//            print("\(playurl)")
-//        }
-        playerItem1 = AVPlayerItem(url:URL(string:self.model!.previewUrl!)!)
-            self.player1 = AVPlayer(playerItem:playerItem1)
-            player1.play()
+        playView.isHidden = false
+        self.playButton.setImage(UIImage(named:"ic_p_zanting"), for: .normal)
+        self.avPlayer .playUrl(url: URL(string:self.model!.previewUrl!)!)
+        let duration : CMTime = avPlayer.playerItem.asset.duration
+        let seconds:Float64 = CMTimeGetSeconds(duration)
+        playSlider.minimumValue = 0
+        playSlider.maximumValue = Float(seconds)
+        playSlider.isContinuous = false
+        avPlayer.player .addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1),
+                                                          queue: DispatchQueue.main) { _ in
+        let currentTime = CMTimeGetSeconds(self.avPlayer.player.currentTime())
+        self.playSlider.value = Float(currentTime)
+        self.playLabel.text = self.avPlayer.timeConversion(time:currentTime)
+        }
+        
     
- //
-//        playerItem1 = AVPlayerItem(url:URL(string:player)!)
-//        self.player1 = AVPlayer(playerItem:playerItem1)
-  //      player1.play()
-//
   }
     
 
@@ -135,14 +163,9 @@ extension ViewController: MusicProtocol {
 // MARK:- UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-//        self.playModel = musicListplay.arrMusicList![indexPath.row]
-//        self.listTableView.mj_footer.resetNoMoreData()
-//
-//        self.playNewMusic(playurl: self.playModel.previewUrl!)
-     
+
         self.model = arrMusicList![indexPath.row]
-        presenter = PlayPresenter(view: self, person: self.model!)
-        self.presenter?.showMusicplay()
+        self.presenter.showMusicplay()
 
     }
     

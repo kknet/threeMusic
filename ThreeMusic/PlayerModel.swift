@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 
-class AudioPlayer: NSObject {
+class PlayerModel: NSObject {
     
     var player = AVPlayer()
     var playerItem:AVPlayerItem!
@@ -20,6 +20,7 @@ class AudioPlayer: NSObject {
         player = AVPlayer(playerItem:playerItem)
         player .play()
 
+        
     }
 
     

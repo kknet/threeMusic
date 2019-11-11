@@ -7,34 +7,60 @@
 //
 
 import Foundation
+
+
 protocol MusicPlayView {
     
     func Musicplayer(player:String)
     
+    
 }
     
 protocol MusicPlayViewPresenter {
-    init(view :MusicPlayView, person:Modelclass)
+    init(view :MusicPlayView)
+   
+    
     
     func showMusicplay()
     
 }
+struct playMode {
+    
+    var isPlay :Bool
+    
+    
+}
 class PlayPresenter: MusicPlayViewPresenter {
+   
+    
 
     
     let  view :MusicPlayView
-    let  modelclass :Modelclass
-    
-    required init(view: MusicPlayView, person: Modelclass) {
+//    let  modelclass :Modelclass
+    var model = playMode(isPlay: true)
+    var playButtonColor:String{
+        
+        return model.isPlay ? "ic_p_zanting" : "ic_p_play"
+    }
+
+    required init(view: MusicPlayView) {
         
         self.view = view
-        self.modelclass = person
+//        self.modelclass = person
     }
     
+    func updataplay() {
+        
+        model.isPlay =   !model.isPlay
+        
+        print("self.model.isPlay==\(model.isPlay)")
+
+    }
     func showMusicplay() {
         
+        self.model.isPlay = true
         
-        self.view.Musicplayer(player:"\(String(describing: self.modelclass.previewUrl))")
+        self.view.Musicplayer(player:"update")
    
     }
     

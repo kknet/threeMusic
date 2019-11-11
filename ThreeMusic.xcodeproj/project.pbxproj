@@ -7,10 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A04436E2379045000393652 /* ic_p_zanting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0443692379044F00393652 /* ic_p_zanting@3x.png */; };
+		0A04436F2379045000393652 /* ic_p_zanting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0443692379044F00393652 /* ic_p_zanting@3x.png */; };
+		0A0443702379045000393652 /* ic_p_zanting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0443692379044F00393652 /* ic_p_zanting@3x.png */; };
+		0A0443712379045000393652 /* ic_p_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436A2379044F00393652 /* ic_p_play@2x.png */; };
+		0A0443722379045000393652 /* ic_p_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436A2379044F00393652 /* ic_p_play@2x.png */; };
+		0A0443732379045000393652 /* ic_p_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436A2379044F00393652 /* ic_p_play@2x.png */; };
+		0A0443742379045000393652 /* ic_p_zanting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436B2379044F00393652 /* ic_p_zanting@2x.png */; };
+		0A0443752379045000393652 /* ic_p_zanting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436B2379044F00393652 /* ic_p_zanting@2x.png */; };
+		0A0443762379045000393652 /* ic_p_zanting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436B2379044F00393652 /* ic_p_zanting@2x.png */; };
+		0A0443772379045000393652 /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436C2379045000393652 /* sousuo.png */; };
+		0A0443782379045000393652 /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436C2379045000393652 /* sousuo.png */; };
+		0A0443792379045000393652 /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436C2379045000393652 /* sousuo.png */; };
+		0A04437A2379045000393652 /* ic_p_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436D2379045000393652 /* ic_p_play@3x.png */; };
+		0A04437B2379045000393652 /* ic_p_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436D2379045000393652 /* ic_p_play@3x.png */; };
+		0A04437C2379045000393652 /* ic_p_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436D2379045000393652 /* ic_p_play@3x.png */; };
 		0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC321D2375015300159117 /* MyTableViewCell.xib */; };
 		0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC321E2375015300159117 /* MyTableViewCell.swift */; };
 		0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC32332375617F00159117 /* PlayPresenter.swift */; };
-		0AEC323623757D7500159117 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC323523757D7500159117 /* PlayModel.swift */; };
+		0AEC323623757D7500159117 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC323523757D7500159117 /* PlayerModel.swift */; };
 		2AB05AC27D0EB5EC97A5EC5E /* Pods_ThreeMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F04B8FFADE8BD4588BF1777 /* Pods_ThreeMusic.framework */; };
 		BEFB1360025BAE9A098756AA /* Pods_ThreeMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEE3A2A96B2ECA7928BAC5F /* Pods_ThreeMusicTests.framework */; };
 		C337905948DE7692F92AF899 /* Pods_ThreeMusic_ThreeMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB8D8CC924319CAA053A021 /* Pods_ThreeMusic_ThreeMusicUITests.framework */; };
@@ -49,10 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0443692379044F00393652 /* ic_p_zanting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_p_zanting@3x.png"; sourceTree = "<group>"; };
+		0A04436A2379044F00393652 /* ic_p_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_p_play@2x.png"; sourceTree = "<group>"; };
+		0A04436B2379044F00393652 /* ic_p_zanting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_p_zanting@2x.png"; sourceTree = "<group>"; };
+		0A04436C2379045000393652 /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
+		0A04436D2379045000393652 /* ic_p_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_p_play@3x.png"; sourceTree = "<group>"; };
 		0AEC321D2375015300159117 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		0AEC321E2375015300159117 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		0AEC32332375617F00159117 /* PlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPresenter.swift; sourceTree = "<group>"; };
-		0AEC323523757D7500159117 /* PlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayModel.swift; sourceTree = "<group>"; };
+		0AEC323523757D7500159117 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		0F04B8FFADE8BD4588BF1777 /* Pods_ThreeMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreeMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E60ADA15EC99204CD22684 /* Pods-ThreeMusic-ThreeMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeMusic-ThreeMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-ThreeMusic-ThreeMusicUITests/Pods-ThreeMusic-ThreeMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A28231633FAC6FF7370EDA5 /* Pods-ThreeMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeMusicTests.release.xcconfig"; path = "Target Support Files/Pods-ThreeMusicTests/Pods-ThreeMusicTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +133,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A04437D2379045200393652 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0A04436A2379044F00393652 /* ic_p_play@2x.png */,
+				0A04436D2379045000393652 /* ic_p_play@3x.png */,
+				0A04436B2379044F00393652 /* ic_p_zanting@2x.png */,
+				0A0443692379044F00393652 /* ic_p_zanting@3x.png */,
+				0A04436C2379045000393652 /* sousuo.png */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		2FE1C29DA28F0C0626476F42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +193,7 @@
 		D55C82AE23742D2500D8C78F /* ThreeMusic */ = {
 			isa = PBXGroup;
 			children = (
+				0A04437D2379045200393652 /* Source */,
 				D55C82AF23742D2500D8C78F /* AppDelegate.swift */,
 				D55C82F3237474C300D8C78F /* HTTPClient.swift */,
 				D55C82F1237474C200D8C78F /* HTTPResponProtocol.swift */,
@@ -173,7 +206,7 @@
 				D55C82EC237437EA00D8C78F /* MusicDelegate.swift */,
 				D55C82E623742ED700D8C78F /* MusicModel.swift */,
 				0AEC32332375617F00159117 /* PlayPresenter.swift */,
-				0AEC323523757D7500159117 /* PlayModel.swift */,
+				0AEC323523757D7500159117 /* PlayerModel.swift */,
 				D55C82E423742D7000D8C78F /* Presenters */,
 				D55C82E523742D8B00D8C78F /* Views */,
 				D55C82E323742D5200D8C78F /* Models */,
@@ -343,9 +376,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A04437A2379045000393652 /* ic_p_play@3x.png in Resources */,
 				D55C82BF23742D2700D8C78F /* LaunchScreen.storyboard in Resources */,
+				0A04436E2379045000393652 /* ic_p_zanting@3x.png in Resources */,
 				0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */,
+				0A0443772379045000393652 /* sousuo.png in Resources */,
+				0A0443712379045000393652 /* ic_p_play@2x.png in Resources */,
 				D55C82BC23742D2700D8C78F /* Assets.xcassets in Resources */,
+				0A0443742379045000393652 /* ic_p_zanting@2x.png in Resources */,
 				D55C82B723742D2500D8C78F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +392,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A04437B2379045000393652 /* ic_p_play@3x.png in Resources */,
+				0A04436F2379045000393652 /* ic_p_zanting@3x.png in Resources */,
+				0A0443752379045000393652 /* ic_p_zanting@2x.png in Resources */,
+				0A0443722379045000393652 /* ic_p_play@2x.png in Resources */,
+				0A0443782379045000393652 /* sousuo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +404,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A04437C2379045000393652 /* ic_p_play@3x.png in Resources */,
+				0A0443702379045000393652 /* ic_p_zanting@3x.png in Resources */,
+				0A0443762379045000393652 /* ic_p_zanting@2x.png in Resources */,
+				0A0443732379045000393652 /* ic_p_play@2x.png in Resources */,
+				0A0443792379045000393652 /* sousuo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */,
-				0AEC323623757D7500159117 /* PlayModel.swift in Sources */,
+				0AEC323623757D7500159117 /* PlayerModel.swift in Sources */,
 				D55C82BA23742D2500D8C78F /* ThreeMusic.xcdatamodeld in Sources */,
 				0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */,
 				D55C82ED237437EA00D8C78F /* MusicDelegate.swift in Sources */,
