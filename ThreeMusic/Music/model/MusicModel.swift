@@ -33,12 +33,12 @@ struct Modelclass {
     static func fromJSON(_ dictionary: [String: Any]? ) -> [Modelclass]? {
         if  let list1 = dictionary{
 
-             let list = (list1 as! NSDictionary).value(forKey: "results") as! NSArray
+            let list = (list1 as NSDictionary).value(forKey: "results") as! NSArray
 
             var newsArr:[Modelclass] = []
                 for item in list{
                 let dic = item as! NSDictionary
-                    var oneNew = Modelclass()
+                var oneNew = Modelclass()
                     
                 oneNew.artistName = dic.value(forKey: "artistName") as? String
                 oneNew.artworkUrl100 = dic.value(forKey: "artworkUrl100") as? String

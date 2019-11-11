@@ -22,6 +22,16 @@
 		0A04437A2379045000393652 /* ic_p_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436D2379045000393652 /* ic_p_play@3x.png */; };
 		0A04437B2379045000393652 /* ic_p_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436D2379045000393652 /* ic_p_play@3x.png */; };
 		0A04437C2379045000393652 /* ic_p_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A04436D2379045000393652 /* ic_p_play@3x.png */; };
+		0A04438B2379396500393652 /* HTTPResponProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0443882379396400393652 /* HTTPResponProtocol.swift */; };
+		0A04438C2379396500393652 /* HTTPResponProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0443882379396400393652 /* HTTPResponProtocol.swift */; };
+		0A04438D2379396500393652 /* HTTPResponProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0443882379396400393652 /* HTTPResponProtocol.swift */; };
+		0A04438E2379396500393652 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0443892379396400393652 /* Presenter.swift */; };
+		0A04438F2379396500393652 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0443892379396400393652 /* Presenter.swift */; };
+		0A0443902379396500393652 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0443892379396400393652 /* Presenter.swift */; };
+		0A0443912379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
+		0A0443922379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
+		0A0443932379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
+		0A04439923793D2000393652 /* MusicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04439823793D2000393652 /* MusicDelegate.swift */; };
 		0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC321D2375015300159117 /* MyTableViewCell.xib */; };
 		0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC321E2375015300159117 /* MyTableViewCell.swift */; };
 		0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC32332375617F00159117 /* PlayPresenter.swift */; };
@@ -40,10 +50,6 @@
 		D55C82D523742D2700D8C78F /* ThreeMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82D423742D2700D8C78F /* ThreeMusicUITests.swift */; };
 		D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82E623742ED700D8C78F /* MusicModel.swift */; };
 		D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82EA2374342E00D8C78F /* MusicPresenter.swift */; };
-		D55C82ED237437EA00D8C78F /* MusicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82EC237437EA00D8C78F /* MusicDelegate.swift */; };
-		D55C82F4237474C300D8C78F /* HTTPResponProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82F1237474C200D8C78F /* HTTPResponProtocol.swift */; };
-		D55C82F5237474C300D8C78F /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82F2237474C200D8C78F /* Presenter.swift */; };
-		D55C82F6237474C300D8C78F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82F3237474C300D8C78F /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,10 @@
 		0A04436B2379044F00393652 /* ic_p_zanting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_p_zanting@2x.png"; sourceTree = "<group>"; };
 		0A04436C2379045000393652 /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
 		0A04436D2379045000393652 /* ic_p_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_p_play@3x.png"; sourceTree = "<group>"; };
+		0A0443882379396400393652 /* HTTPResponProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponProtocol.swift; sourceTree = "<group>"; };
+		0A0443892379396400393652 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		0A04438A2379396500393652 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		0A04439823793D2000393652 /* MusicDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDelegate.swift; sourceTree = "<group>"; };
 		0AEC321D2375015300159117 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		0AEC321E2375015300159117 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		0AEC32332375617F00159117 /* PlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPresenter.swift; sourceTree = "<group>"; };
@@ -99,10 +109,6 @@
 		D55C82D623742D2700D8C78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55C82E623742ED700D8C78F /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		D55C82EA2374342E00D8C78F /* MusicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPresenter.swift; sourceTree = "<group>"; };
-		D55C82EC237437EA00D8C78F /* MusicDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDelegate.swift; sourceTree = "<group>"; };
-		D55C82F1237474C200D8C78F /* HTTPResponProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponProtocol.swift; path = "../../Swift-MVP/MVPDemo/HTTPResponProtocol.swift"; sourceTree = "<group>"; };
-		D55C82F2237474C200D8C78F /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presenter.swift; path = "../../Swift-MVP/MVPDemo/Presenter.swift"; sourceTree = "<group>"; };
-		D55C82F3237474C300D8C78F /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = "../../Swift-MVP/MVPDemo/HTTPClient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,77 @@
 				0A04436C2379045000393652 /* sousuo.png */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0A04437E2379380000393652 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				0A04438A2379396500393652 /* HTTPClient.swift */,
+				0A0443882379396400393652 /* HTTPResponProtocol.swift */,
+				0A0443892379396400393652 /* Presenter.swift */,
+				0A0443832379386B00393652 /* model */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		0A0443832379386B00393652 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0A044384237938A100393652 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				0A044395237939C000393652 /* Presenter */,
+				0A044396237939E300393652 /* View */,
+				0A044385237938B200393652 /* model */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		0A044385237938B200393652 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0A04439823793D2000393652 /* MusicDelegate.swift */,
+				D55C82E623742ED700D8C78F /* MusicModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0A044395237939C000393652 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D55C82EA2374342E00D8C78F /* MusicPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0A044396237939E300393652 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AEC321E2375015300159117 /* MyTableViewCell.swift */,
+				0AEC321D2375015300159117 /* MyTableViewCell.xib */,
+				D55C82B323742D2500D8C78F /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A04439723793A5400393652 /* PlayView */ = {
+			isa = PBXGroup;
+			children = (
+				0AEC32332375617F00159117 /* PlayPresenter.swift */,
+			);
+			path = PlayView;
+			sourceTree = "<group>";
+		};
+		0A04439C23793DE600393652 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				0AEC323523757D7500159117 /* PlayerModel.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		2FE1C29DA28F0C0626476F42 /* Frameworks */ = {
@@ -193,24 +270,13 @@
 		D55C82AE23742D2500D8C78F /* ThreeMusic */ = {
 			isa = PBXGroup;
 			children = (
-				0A04437D2379045200393652 /* Source */,
 				D55C82AF23742D2500D8C78F /* AppDelegate.swift */,
-				D55C82F3237474C300D8C78F /* HTTPClient.swift */,
-				D55C82F1237474C200D8C78F /* HTTPResponProtocol.swift */,
-				D55C82F2237474C200D8C78F /* Presenter.swift */,
 				D55C82B123742D2500D8C78F /* SceneDelegate.swift */,
-				D55C82B323742D2500D8C78F /* ViewController.swift */,
-				0AEC321E2375015300159117 /* MyTableViewCell.swift */,
-				0AEC321D2375015300159117 /* MyTableViewCell.xib */,
-				D55C82EA2374342E00D8C78F /* MusicPresenter.swift */,
-				D55C82EC237437EA00D8C78F /* MusicDelegate.swift */,
-				D55C82E623742ED700D8C78F /* MusicModel.swift */,
-				0AEC32332375617F00159117 /* PlayPresenter.swift */,
-				0AEC323523757D7500159117 /* PlayerModel.swift */,
-				D55C82E423742D7000D8C78F /* Presenters */,
-				D55C82E523742D8B00D8C78F /* Views */,
-				D55C82E323742D5200D8C78F /* Models */,
-				D55C82E223742D3B00D8C78F /* DataSource */,
+				0A04437D2379045200393652 /* Source */,
+				0A044384237938A100393652 /* Music */,
+				0A04437E2379380000393652 /* Http */,
+				0A04439C23793DE600393652 /* Player */,
+				0A04439723793A5400393652 /* PlayView */,
 				D55C82B523742D2500D8C78F /* Main.storyboard */,
 				D55C82BB23742D2700D8C78F /* Assets.xcassets */,
 				D55C82BD23742D2700D8C78F /* LaunchScreen.storyboard */,
@@ -236,34 +302,6 @@
 				D55C82D623742D2700D8C78F /* Info.plist */,
 			);
 			path = ThreeMusicUITests;
-			sourceTree = "<group>";
-		};
-		D55C82E223742D3B00D8C78F /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		D55C82E323742D5200D8C78F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D55C82E423742D7000D8C78F /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		D55C82E523742D8B00D8C78F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,16 +579,16 @@
 			files = (
 				D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */,
 				0AEC323623757D7500159117 /* PlayerModel.swift in Sources */,
+				0A0443912379396500393652 /* HTTPClient.swift in Sources */,
+				0A04439923793D2000393652 /* MusicDelegate.swift in Sources */,
 				D55C82BA23742D2500D8C78F /* ThreeMusic.xcdatamodeld in Sources */,
 				0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */,
-				D55C82ED237437EA00D8C78F /* MusicDelegate.swift in Sources */,
-				D55C82F4237474C300D8C78F /* HTTPResponProtocol.swift in Sources */,
-				D55C82F5237474C300D8C78F /* Presenter.swift in Sources */,
 				0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */,
+				0A04438E2379396500393652 /* Presenter.swift in Sources */,
 				D55C82B423742D2500D8C78F /* ViewController.swift in Sources */,
-				D55C82F6237474C300D8C78F /* HTTPClient.swift in Sources */,
 				D55C82B023742D2500D8C78F /* AppDelegate.swift in Sources */,
 				D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */,
+				0A04438B2379396500393652 /* HTTPResponProtocol.swift in Sources */,
 				D55C82B223742D2500D8C78F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +597,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A04438F2379396500393652 /* Presenter.swift in Sources */,
+				0A04438C2379396500393652 /* HTTPResponProtocol.swift in Sources */,
+				0A0443922379396500393652 /* HTTPClient.swift in Sources */,
 				D55C82CA23742D2700D8C78F /* ThreeMusicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +608,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0443902379396500393652 /* Presenter.swift in Sources */,
+				0A04438D2379396500393652 /* HTTPResponProtocol.swift in Sources */,
+				0A0443932379396500393652 /* HTTPClient.swift in Sources */,
 				D55C82D523742D2700D8C78F /* ThreeMusicUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

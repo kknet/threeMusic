@@ -11,17 +11,15 @@ import Foundation
 
 protocol MusicPlayView {
     
-    func Musicplayer(player:String)
-    
+    func musicPlayer(player:String)
     
 }
     
 protocol MusicPlayViewPresenter {
+ 
     init(view :MusicPlayView)
-   
     
-    
-    func showMusicplay()
+    func showMusicPlay()
     
 }
 struct playMode {
@@ -33,37 +31,44 @@ struct playMode {
 class PlayPresenter: MusicPlayViewPresenter {
    
     
-
-    
     let  view :MusicPlayView
-//    let  modelclass :Modelclass
-    var model = playMode(isPlay: true)
+    var model = playMode(isPlay:true )
     var playButtonColor:String{
         
-        return model.isPlay ? "ic_p_zanting" : "ic_p_play"
+    return model.isPlay ? "ic_p_zanting" : "ic_p_play"
     }
 
     required init(view: MusicPlayView) {
         
         self.view = view
-//        self.modelclass = person
     }
     
-    func updataplay() {
+   func stopPlay() {
+          
+        self.model.isPlay = false
+      
+    }
+    
+    func beginPlay() {
+             
+        self.model.isPlay = true
+         
+    }
+    
+    func updataPlay() {
         
-        model.isPlay =   !model.isPlay
+        model.isPlay = !model.isPlay
         
         print("self.model.isPlay==\(model.isPlay)")
 
     }
-    func showMusicplay() {
+    
+    func showMusicPlay() {
         
         self.model.isPlay = true
         
-        self.view.Musicplayer(player:"update")
+        self.view.musicPlayer(player:"update")
    
     }
-    
-
     
 }

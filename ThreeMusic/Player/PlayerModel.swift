@@ -14,16 +14,12 @@ class PlayerModel: NSObject {
     var player = AVPlayer()
     var playerItem:AVPlayerItem!
 
-   
     func playUrl(url: URL){
         playerItem = AVPlayerItem(url:url)
         player = AVPlayer(playerItem:playerItem)
         player .play()
-
-        
     }
 
-    
     func playBackSliderValueChanged(seconds : Int64 ){
         let targetTime:CMTime = CMTimeMake(value: seconds, timescale: 1)
                player.seek(to: targetTime)

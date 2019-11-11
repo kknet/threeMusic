@@ -10,6 +10,8 @@ import UIKit
 import MJRefresh
 import AVFoundation
 class ViewController: UIViewController,MusicPlayView{
+
+    
  
     
     
@@ -21,7 +23,7 @@ class ViewController: UIViewController,MusicPlayView{
     var playerItem1:AVPlayerItem!
     var arrMusicList : [Modelclass]!
     var serchString:String  = "vi"
-    var  limit  = 1
+
     
     
     var presenter : PlayPresenter!
@@ -43,6 +45,7 @@ class ViewController: UIViewController,MusicPlayView{
     override func viewDidLoad() {
         self.musicPresenter.initial(self)
         presenter = PlayPresenter(view: self)
+        self.model = Modelclass.init()
 
         
         reloadData(serch: "vi", page: 1)
@@ -56,11 +59,8 @@ class ViewController: UIViewController,MusicPlayView{
         playTableView.mj_footer = mjFooterView
         playView.isHidden = true
         
-        self.model = Modelclass.init()
-               
-        presenter = PlayPresenter(view: self)
-        
-             NotificationCenter.default.addObserver(self, selector: #selector(finishedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.playerItem)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(finishedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.playerItem)
         super.viewDidLoad()
 
     }
@@ -78,55 +78,59 @@ class ViewController: UIViewController,MusicPlayView{
     }
     @IBAction func playButtonCiclk(_ sender: Any) {
 
-        self.presenter.updataplay()
+        self.presenter.updataPlay()
      
         if self.presenter.model.isPlay {
             avPlayer.player.play()
               } else {
             avPlayer.player.pause()
               }
-        playButton .setImage( UIImage(named:self.presenter.playButtonColor), for: .normal)
+            playButton .setImage(UIImage(named:self.presenter.playButtonColor), for: .normal)
 
      }
     // MARK:-EventTableView_header and footer
-    @objc func Refresh(){
-        
-    }
+  
      @objc func headerRefresh(){
             print("下拉刷新")
-         self.playTableView.mj_header.endRefreshing()
-         self.playTableView.mj_footer.resetNoMoreData()
-         limit = 1
-         reloadData(serch: serchString, page: limit)
+        self.playTableView.mj_header.endRefreshing()
+        self.playTableView.mj_footer.resetNoMoreData()
+        self.musicPresenter.pageLimit.limit = 1
+        reloadData(serch: serchString, page: self.musicPresenter.pageLimit.limit)
 
      }
+
      @objc func footerRefresh(){
          print("上拉刷新")
-         if limit >= 8{
+        if self.musicPresenter.pageLimit.limit >= 8{
          playTableView.mj_footer.endRefreshingWithNoMoreData()
          }else{
-         limit += 1
-         reloadData(serch: serchString, page: limit)
+            self.musicPresenter.pageLimit.limit += 1
+            reloadData(serch: serchString, page: self.musicPresenter.pageLimit.limit)
     }
        
 }
     @objc func finishedPlaying(myNotification:NSNotification) {
-                     print("播放完毕!")
-                     self.playView .isHidden = true
-                     self.playButton .setImage(UIImage(named: "ic_p_play"),for: .normal)
-                     self.avPlayer.stopPlayerItem()
-                     }
+        
+        print("播放完毕!")
+        self.presenter.stopPlay()
+        self.playView.isHidden  = !self.presenter.model.isPlay
+        self.playButton  .setImage(UIImage(named:self.presenter.playButtonColor ), for: .normal)
+        self.avPlayer.stopPlayerItem()
+    
+    }
        
     
     
-    func Musicplayer(player: String) {
+    func musicPlayer(player: String) {
         print("player==== \(player)")
-        playView.isHidden = false
-        self.playButton.setImage(UIImage(named:"ic_p_zanting"), for: .normal)
+        
+        self.presenter.beginPlay()
+        self.playView.isHidden  = !self.presenter.model.isPlay
+        self.playButton  .setImage(UIImage(named:self.presenter.playButtonColor ), for: .normal)
         self.avPlayer .playUrl(url: URL(string:self.model!.previewUrl!)!)
+       
         let duration : CMTime = avPlayer.playerItem.asset.duration
         let seconds:Float64 = CMTimeGetSeconds(duration)
-        playSlider.minimumValue = 0
         playSlider.maximumValue = Float(seconds)
         playSlider.isContinuous = false
         avPlayer.player .addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1),
@@ -165,7 +169,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
 
         self.model = arrMusicList![indexPath.row]
-        self.presenter.showMusicplay()
+        self.presenter.showMusicPlay()
 
     }
     
@@ -193,7 +197,7 @@ extension ViewController: UITableViewDataSource {
         
         let oneModel = self.arrMusicList[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier) as? MyTableViewCell else { return UITableViewCell() }
-        cell.setup(titleName:oneModel.artistName! ,subtitleName:oneModel.country!)
+        cell.setup(titleName:oneModel.artistName!,subtitleName:oneModel.country!)
         return cell
 
         }
@@ -203,12 +207,12 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
           //收起键盘
           textField.resignFirstResponder()
-          limit = 1
+        self.musicPresenter.pageLimit.limit = 1
           playTableView.mj_footer.resetNoMoreData()
 
           if (serchString.count>0){
            serchString = textField.text ?? ""
-            reloadData(serch: serchString, page: limit)
+            reloadData(serch: serchString, page: self.musicPresenter.pageLimit.limit)
         }
           return true;
       }
