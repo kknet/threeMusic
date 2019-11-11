@@ -22,7 +22,6 @@ class ViewController: UIViewController,MusicPlayView{
     var avPlayer = PlayerModel()
     var playerItem1:AVPlayerItem!
     var arrMusicList : [Modelclass]!
-    var serchString:String  = "vi"
 
     
     
@@ -95,7 +94,7 @@ class ViewController: UIViewController,MusicPlayView{
         self.playTableView.mj_header.endRefreshing()
         self.playTableView.mj_footer.resetNoMoreData()
         self.musicPresenter.pageLimit.limit = 1
-        reloadData(serch: serchString, page: self.musicPresenter.pageLimit.limit)
+        reloadData(serch: self.musicPresenter.serchString.string, page: self.musicPresenter.pageLimit.limit)
 
      }
 
@@ -103,10 +102,11 @@ class ViewController: UIViewController,MusicPlayView{
          print("上拉刷新")
         if self.musicPresenter.pageLimit.limit >= 8{
          playTableView.mj_footer.endRefreshingWithNoMoreData()
+            
          }else{
             self.musicPresenter.pageLimit.limit += 1
-            reloadData(serch: serchString, page: self.musicPresenter.pageLimit.limit)
-    }
+            reloadData(serch: self.musicPresenter.serchString.string, page: self.musicPresenter.pageLimit.limit)
+        }
        
 }
     @objc func finishedPlaying(myNotification:NSNotification) {
@@ -138,6 +138,7 @@ class ViewController: UIViewController,MusicPlayView{
         let currentTime = CMTimeGetSeconds(self.avPlayer.player.currentTime())
         self.playSlider.value = Float(currentTime)
         self.playLabel.text = self.avPlayer.timeConversion(time:currentTime)
+                                                            
         }
         
     
@@ -166,6 +167,7 @@ extension ViewController: MusicProtocol {
 }
 // MARK:- UITableViewDelegate
 extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
 
         self.model = arrMusicList![indexPath.row]
@@ -204,15 +206,18 @@ extension ViewController: UITableViewDataSource {
     }
 extension ViewController: UITextFieldDelegate {
     
+    
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
           //收起键盘
           textField.resignFirstResponder()
-        self.musicPresenter.pageLimit.limit = 1
+          self.musicPresenter.pageLimit.limit = 1
           playTableView.mj_footer.resetNoMoreData()
 
-          if (serchString.count>0){
-           serchString = textField.text ?? ""
-            reloadData(serch: serchString, page: self.musicPresenter.pageLimit.limit)
+          if (self.musicPresenter.serchString.string.count>0){
+            self.musicPresenter.serchString.string = textField.text ?? ""
+            reloadData(serch: self.musicPresenter.serchString.string, page: self.musicPresenter.pageLimit.limit)
         }
           return true;
       }

@@ -8,6 +8,9 @@
 
 import Foundation
 protocol MusicProtocol {
+    
+    
   func onGetCacheSuccess(model: [Modelclass]?)
   func onGetCacheFailure(error: Error)
+
 }

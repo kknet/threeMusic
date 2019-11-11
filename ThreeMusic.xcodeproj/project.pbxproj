@@ -157,16 +157,8 @@
 				0A04438A2379396500393652 /* HTTPClient.swift */,
 				0A0443882379396400393652 /* HTTPResponProtocol.swift */,
 				0A0443892379396400393652 /* Presenter.swift */,
-				0A0443832379386B00393652 /* model */,
 			);
 			path = Http;
-			sourceTree = "<group>";
-		};
-		0A0443832379386B00393652 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		0A044384237938A100393652 /* Music */ = {

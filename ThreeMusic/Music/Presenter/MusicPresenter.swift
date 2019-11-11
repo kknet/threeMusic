@@ -8,26 +8,31 @@
 
 import Foundation
 
-struct pageClass {
+struct SerchClass {
+    
+    var  string  : String
+    
+    
+}
+struct PageClass {
+    
     var limit : Int
 }
 struct MusicPresenter <U> where U: MusicProtocol {
   
-    var  pageLimit = pageClass(limit: 1)
+    var  pageLimit = PageClass(limit: 1)
+    var  serchString  = SerchClass(string: "vi")
 
   var view: U?
   mutating func initial(_ view: U) {
     self.view = view
     self.httpClient = HTTPClient(handle: self )
     
-    
   }
   
   var httpClient: HTTPClient?
   init() {}
 
-    
-    
     lazy var musicList : [Modelclass] =  {
         
         var musicList  = Array<Modelclass>()
@@ -37,7 +42,6 @@ struct MusicPresenter <U> where U: MusicProtocol {
     
     func getCache(by term:String, by limit : Int) {
       
-    
     self.httpClient?.get(url: "https://itunes.apple.com/search?term=\(term)&limit=\(limit*25)&entity=song")
   }
 }
