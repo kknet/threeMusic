@@ -57,10 +57,27 @@ class ViewController: UIViewController,MusicPlayView{
         
         
         
+//        let ipContent = "www.google.com"
+//        if let ipArray = ipContent.components(separatedBy: ","){
+//                 for ip in ipArray{
+                     let ping = Ping()
+                     ping.delegate = self
+                     ping.host = "www.google.com"
+                     PingMannager.shared.add(ping)
+//                 }
+//             }
+//             self.timeout = TimeInterval(self.timeoutTextField.text ?? self.timeout.description)!
+//             self.period = TimeInterval(self.periodTextField.text ?? self.period.description)!
+             PingMannager.shared.setup {
+//                 PingMannager.shared.timeout = self.timeout
+                 PingMannager.shared.pingPeriod = 1
+                 PingMannager.shared.startPing()
+             }
+             
         //同步+并发
 //        self.syncConcurrent()
         //异步+并发
-        self.asyncConcurrent()
+//        self.asyncConcurrent()
         //同步+串行
 //        self.syncSerial()
         
@@ -289,6 +306,58 @@ class ViewController: UIViewController,MusicPlayView{
     
 
 }
+extension UIColor {//返回随机颜色
+class var randomColor: UIColor {
+ get {
+let red = CGFloat(arc4random()%256)/255.0
+let green = CGFloat(arc4random()%256)/255.0
+let blue = CGFloat(arc4random()%256)/255.0
+ return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+}
+    }
+}
+extension ViewController : PingDelegate{
+    func stop(_ ping: Ping) {
+        
+    }
+    
+    func ping(_ pinger: Ping, didFailWithError error: Error) {
+        
+    }
+    func ping(_ pinger: Ping, didTimeoutWith result: PingResult) {
+        pingResult(result)
+    }
+    func ping(_ pinger: Ping, didReceiveReplyWith result: PingResult) {
+        pingResult(result)
+    }
+    func ping(_ pinger: Ping, didReceiveUnexpectedReplyWith result: PingResult) {
+        pingResult(result)
+    }
+    func pingResult(_ result:PingResult){
+        var resultString = ""
+        if result.pingStatus == .success{
+            resultString = "Host:\(result.host ?? "") ttl:\(result.ttl) time:\(Int(result.time * 1000))"
+        }else{
+            resultString = "Host:\(result.host ?? "") failed"
+        }
+        DispatchQueue.main.sync {
+            
+
+            
+            self.view.backgroundColor = UIColor.randomColor
+            
+            print(".... \(resultString)")
+            
+            Thread.sleep(forTimeInterval: 5)
+
+//            let oldString = self.pingResultView.text ?? ""
+//            self.pingResultView.text = resultString + "\n" + oldString
+        }
+        
+    }
+    
+}
+
 extension ViewController: MusicProtocol {
     
     func onGetCacheSuccess(model: [Modelclass]?) {

@@ -32,6 +32,18 @@
 		0A0443922379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
 		0A0443932379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
 		0A04439923793D2000393652 /* MusicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04439823793D2000393652 /* MusicDelegate.swift */; };
+		0A48336D237AC35E0094CA84 /* ICMPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A483369237AC35E0094CA84 /* ICMPHeader.swift */; };
+		0A48336E237AC35E0094CA84 /* ICMPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A483369237AC35E0094CA84 /* ICMPHeader.swift */; };
+		0A48336F237AC35E0094CA84 /* ICMPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A483369237AC35E0094CA84 /* ICMPHeader.swift */; };
+		0A483370237AC35E0094CA84 /* Ping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336A237AC35E0094CA84 /* Ping.swift */; };
+		0A483371237AC35E0094CA84 /* Ping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336A237AC35E0094CA84 /* Ping.swift */; };
+		0A483372237AC35E0094CA84 /* Ping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336A237AC35E0094CA84 /* Ping.swift */; };
+		0A483373237AC35E0094CA84 /* PingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336B237AC35E0094CA84 /* PingResult.swift */; };
+		0A483374237AC35E0094CA84 /* PingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336B237AC35E0094CA84 /* PingResult.swift */; };
+		0A483375237AC35E0094CA84 /* PingResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336B237AC35E0094CA84 /* PingResult.swift */; };
+		0A483376237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
+		0A483377237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
+		0A483378237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
 		0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC321D2375015300159117 /* MyTableViewCell.xib */; };
 		0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC321E2375015300159117 /* MyTableViewCell.swift */; };
 		0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC32332375617F00159117 /* PlayPresenter.swift */; };
@@ -79,6 +91,10 @@
 		0A0443892379396400393652 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		0A04438A2379396500393652 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		0A04439823793D2000393652 /* MusicDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDelegate.swift; sourceTree = "<group>"; };
+		0A483369237AC35E0094CA84 /* ICMPHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMPHeader.swift; sourceTree = "<group>"; };
+		0A48336A237AC35E0094CA84 /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ping.swift; sourceTree = "<group>"; };
+		0A48336B237AC35E0094CA84 /* PingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingResult.swift; sourceTree = "<group>"; };
+		0A48336C237AC35E0094CA84 /* PingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingManager.swift; sourceTree = "<group>"; };
 		0AEC321D2375015300159117 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		0AEC321E2375015300159117 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		0AEC32332375617F00159117 /* PlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPresenter.swift; sourceTree = "<group>"; };
@@ -214,6 +230,17 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		0A483368237AC3510094CA84 /* PingManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A483369237AC35E0094CA84 /* ICMPHeader.swift */,
+				0A48336A237AC35E0094CA84 /* Ping.swift */,
+				0A48336C237AC35E0094CA84 /* PingManager.swift */,
+				0A48336B237AC35E0094CA84 /* PingResult.swift */,
+			);
+			path = PingManager;
+			sourceTree = "<group>";
+		};
 		2FE1C29DA28F0C0626476F42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +289,7 @@
 		D55C82AE23742D2500D8C78F /* ThreeMusic */ = {
 			isa = PBXGroup;
 			children = (
+				0A483368237AC3510094CA84 /* PingManager */,
 				D55C82AF23742D2500D8C78F /* AppDelegate.swift */,
 				D55C82B123742D2500D8C78F /* SceneDelegate.swift */,
 				0A04437D2379045200393652 /* Source */,
@@ -572,9 +600,13 @@
 				D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */,
 				0AEC323623757D7500159117 /* PlayerModel.swift in Sources */,
 				0A0443912379396500393652 /* HTTPClient.swift in Sources */,
+				0A483370237AC35E0094CA84 /* Ping.swift in Sources */,
+				0A48336D237AC35E0094CA84 /* ICMPHeader.swift in Sources */,
 				0A04439923793D2000393652 /* MusicDelegate.swift in Sources */,
+				0A483376237AC35F0094CA84 /* PingManager.swift in Sources */,
 				D55C82BA23742D2500D8C78F /* ThreeMusic.xcdatamodeld in Sources */,
 				0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */,
+				0A483373237AC35E0094CA84 /* PingResult.swift in Sources */,
 				0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */,
 				0A04438E2379396500393652 /* Presenter.swift in Sources */,
 				D55C82B423742D2500D8C78F /* ViewController.swift in Sources */,
@@ -589,10 +621,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A48336E237AC35E0094CA84 /* ICMPHeader.swift in Sources */,
 				0A04438F2379396500393652 /* Presenter.swift in Sources */,
 				0A04438C2379396500393652 /* HTTPResponProtocol.swift in Sources */,
+				0A483371237AC35E0094CA84 /* Ping.swift in Sources */,
 				0A0443922379396500393652 /* HTTPClient.swift in Sources */,
+				0A483377237AC35F0094CA84 /* PingManager.swift in Sources */,
 				D55C82CA23742D2700D8C78F /* ThreeMusicTests.swift in Sources */,
+				0A483374237AC35E0094CA84 /* PingResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,10 +636,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A48336F237AC35E0094CA84 /* ICMPHeader.swift in Sources */,
 				0A0443902379396500393652 /* Presenter.swift in Sources */,
 				0A04438D2379396500393652 /* HTTPResponProtocol.swift in Sources */,
+				0A483372237AC35E0094CA84 /* Ping.swift in Sources */,
 				0A0443932379396500393652 /* HTTPClient.swift in Sources */,
+				0A483378237AC35F0094CA84 /* PingManager.swift in Sources */,
 				D55C82D523742D2700D8C78F /* ThreeMusicUITests.swift in Sources */,
+				0A483375237AC35E0094CA84 /* PingResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
