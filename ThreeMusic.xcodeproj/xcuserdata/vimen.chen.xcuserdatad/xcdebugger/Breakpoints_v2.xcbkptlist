@@ -50,38 +50,6 @@
             endingLineNumber = "34"
             landmarkName = "get(url:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6E911A69-A3EA-4B06-9A8D-8E3EA33174D9 - f81a8a54fe67a613"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ThreeMusic.HTTPClient.get(url: Swift.String) -&gt; ()"
-                  moduleName = "ThreeMusic"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vimen.chen/Desktop/work/Swift-MVP/MVPDemo/HTTPClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "973">
-               </Location>
-               <Location
-                  uuid = "6E911A69-A3EA-4B06-9A8D-8E3EA33174D9 - 609101ca69aa4d6b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ThreeMusic.HTTPClient.get(url: Swift.String) -&gt; ()"
-                  moduleName = "ThreeMusic"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vimen.chen/Desktop/work/Swift-MVP/MVPDemo/HTTPClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "1708">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

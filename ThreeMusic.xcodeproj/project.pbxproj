@@ -62,6 +62,9 @@
 		D55C82D523742D2700D8C78F /* ThreeMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82D423742D2700D8C78F /* ThreeMusicUITests.swift */; };
 		D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82E623742ED700D8C78F /* MusicModel.swift */; };
 		D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82EA2374342E00D8C78F /* MusicPresenter.swift */; };
+		D5EA6D2F237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EA6D2E237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png */; };
+		D5EA6D30237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EA6D2E237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png */; };
+		D5EA6D31237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5EA6D2E237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,7 @@
 		D55C82D623742D2700D8C78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55C82E623742ED700D8C78F /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		D55C82EA2374342E00D8C78F /* MusicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPresenter.swift; sourceTree = "<group>"; };
+		D5EA6D2E237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_xiaowei_my_logo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 				0A04436A2379044F00393652 /* ic_p_play@2x.png */,
 				0A04436D2379045000393652 /* ic_p_play@3x.png */,
 				0A04436B2379044F00393652 /* ic_p_zanting@2x.png */,
+				D5EA6D2E237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png */,
 				0A0443692379044F00393652 /* ic_p_zanting@3x.png */,
 				0A04436C2379045000393652 /* sousuo.png */,
 			);
@@ -440,6 +445,7 @@
 				0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */,
 				0A0443772379045000393652 /* sousuo.png in Resources */,
 				0A0443712379045000393652 /* ic_p_play@2x.png in Resources */,
+				D5EA6D2F237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */,
 				D55C82BC23742D2700D8C78F /* Assets.xcassets in Resources */,
 				0A0443742379045000393652 /* ic_p_zanting@2x.png in Resources */,
 				D55C82B723742D2500D8C78F /* Main.storyboard in Resources */,
@@ -450,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EA6D30237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */,
 				0A04437B2379045000393652 /* ic_p_play@3x.png in Resources */,
 				0A04436F2379045000393652 /* ic_p_zanting@3x.png in Resources */,
 				0A0443752379045000393652 /* ic_p_zanting@2x.png in Resources */,
@@ -462,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EA6D31237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */,
 				0A04437C2379045000393652 /* ic_p_play@3x.png in Resources */,
 				0A0443702379045000393652 /* ic_p_zanting@3x.png in Resources */,
 				0A0443762379045000393652 /* ic_p_zanting@2x.png in Resources */,

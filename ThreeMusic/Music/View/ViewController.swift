@@ -36,6 +36,7 @@ class ViewController: UIViewController,MusicPlayView{
     @IBOutlet weak var playLabel: UILabel!
     @IBOutlet weak var playSlider: UISlider!
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         
         self.musicPresenter.initial(self)
@@ -86,11 +87,54 @@ class ViewController: UIViewController,MusicPlayView{
         
         
         
-        
+//        playAnimation()
+        self.aMove()
         
         super.viewDidLoad()
 
     }
+    
+        func aMove() {
+            let ball = self.imageView
+            UIView.animate(withDuration: 2, animations: {
+                ball?.frame.origin.x = 0
+                ball?.frame.origin.y = 0
+                }) { (aFinished) in
+                    if aFinished {
+                        self.bMove()
+                    }
+           }
+       }
+        func bMove() {
+            let ball = self.imageView
+            UIView.animate(withDuration: 2, animations: {
+                ball?.frame.origin.x = self.view.frame.width-80
+                ball?.frame.origin.y = 0
+                }) { (bFinished) in
+                    self.cMove()
+           }
+        }
+        func cMove()  {
+            let ball = self.imageView
+            UIView.animate(withDuration: 2, animations: {
+                ball?.frame.origin.x =   self.view.frame.width-80
+                ball?.frame.origin.y = self.view.frame.height-80
+                }) { (cFinished) in
+                    self.dMove()
+            }
+        }
+        func dMove()  {
+            let ball = self.imageView
+            UIView.animate(withDuration: 2, animations: {
+                ball?.bounds.origin.x = self.view.frame.width-80
+                ball?.bounds.origin.y = self.view.frame.height-80
+                }) { (dFinished) in
+                    self.aMove()
+            }
+         }
+
+
+
     
     //同步+并发队列
         func syncConcurrent()  {
@@ -340,15 +384,17 @@ extension ViewController : PingDelegate{
         }else{
             resultString = "Host:\(result.host ?? "") failed"
         }
-        DispatchQueue.main.sync {
-            
+        Thread.sleep(forTimeInterval: 5)
 
+        DispatchQueue.main.async {
             
             self.view.backgroundColor = UIColor.randomColor
+
+            
+//            self.view.backgroundColor = UIColor.randomColor
             
             print(".... \(resultString)")
             
-            Thread.sleep(forTimeInterval: 5)
 
 //            let oldString = self.pingResultView.text ?? ""
 //            self.pingResultView.text = resultString + "\n" + oldString
