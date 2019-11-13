@@ -35,7 +35,8 @@ class ViewController: UIViewController,MusicPlayView{
     
     @IBOutlet weak var playLabel: UILabel!
     @IBOutlet weak var playSlider: UISlider!
-
+    @IBOutlet weak var animaButton: UIButton!
+    
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         
@@ -43,7 +44,7 @@ class ViewController: UIViewController,MusicPlayView{
         presenter = PlayPresenter(view: self)
         self.model = Modelclass.init()
         
-//        reloadData(serch: "vi", page: 1)
+        reloadData(serch: "vi", page: 1)
         serchTextField.delegate = self as UITextFieldDelegate
         playTableView.dataSource = self as UITableViewDataSource
         playTableView.delegate = self as UITableViewDelegate
@@ -55,7 +56,7 @@ class ViewController: UIViewController,MusicPlayView{
         playView.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(finishedPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.playerItem)
         
-        
+        self.animaButton.isSelected = false
         
         
 //        let ipContent = "www.google.com"
@@ -88,22 +89,65 @@ class ViewController: UIViewController,MusicPlayView{
         
         
 //        playAnimation()
-        self.aMove()
+//        self.aMove()
         
         super.viewDidLoad()
 
     }
     
-        func aMove() {
-            let ball = self.imageView
-            UIView.animate(withDuration: 2, animations: {
-                ball?.frame.origin.x = 0
-                ball?.frame.origin.y = 0
-                }) { (aFinished) in
-                    if aFinished {
-                        self.bMove()
-                    }
-           }
+    @IBAction func animateButtonciclk(_ sender: Any) {
+        
+        print("self.animaButton.isSelected == \(self.animaButton.isSelected)")
+        if self.animaButton.isSelected{
+            self.imageView.layer.removeAllAnimations()
+            self.animaButton.isSelected = false
+//            self.animaButton.titleLabel?.text = "开始动画"
+            self.animaButton.setTitle("开始动画", for: .normal)
+
+        }else{
+            self.aMove()
+
+            self.animaButton.isSelected = true
+            self.animaButton.setTitle("结束动画", for: .normal)
+        }
+        
+    }
+    func aMove() {
+        
+        let ball = self.imageView
+        UIView.animateKeyframes(withDuration: 8, delay: 0, options: .repeat, animations: {
+//            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+//              ball?.frame.origin.x = 0
+//              ball?.frame.origin.y = 0
+//            })
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration:1/4.0, animations: {
+                ball?.frame.origin.x = self.view.frame.width-80
+                               ball?.frame.origin.y = 0
+            })
+            UIView.addKeyframe(withRelativeStartTime: 1/4, relativeDuration: 1/4.0, animations: {
+                 ball?.frame.origin.x =   self.view.frame.width-80
+                              ball?.frame.origin.y = self.view.frame.height-80
+            })
+            UIView.addKeyframe(withRelativeStartTime: 1/2, relativeDuration: 1/4.0, animations: {
+                  ball?.frame.origin.x = 0
+                              ball?.frame.origin.y = self.view.frame.height-80
+            })
+            UIView.addKeyframe(withRelativeStartTime: 3/4, relativeDuration: 1/4.0, animations: {
+                             ball?.frame.origin.x = 0
+                                         ball?.frame.origin.y = 0
+                       })
+        }, completion: nil)
+        
+        
+//            let ball = self.imageView
+//            UIView.animate(withDuration: 2, animations: {
+//                ball?.frame.origin.x = 0
+//                ball?.frame.origin.y = 0
+//                }) { (aFinished) in
+//                    if aFinished {
+//                        self.bMove()
+//                    }
+//           }
        }
         func bMove() {
             let ball = self.imageView
@@ -126,8 +170,10 @@ class ViewController: UIViewController,MusicPlayView{
         func dMove()  {
             let ball = self.imageView
             UIView.animate(withDuration: 2, animations: {
-                ball?.bounds.origin.x = self.view.frame.width-80
-                ball?.bounds.origin.y = self.view.frame.height-80
+                ball?.frame.origin.x = 0
+                
+                
+                ball?.frame.origin.y = self.view.frame.height-80
                 }) { (dFinished) in
                     self.aMove()
             }
@@ -350,15 +396,15 @@ class ViewController: UIViewController,MusicPlayView{
     
 
 }
-extension UIColor {//返回随机颜色
-class var randomColor: UIColor {
- get {
-let red = CGFloat(arc4random()%256)/255.0
-let green = CGFloat(arc4random()%256)/255.0
-let blue = CGFloat(arc4random()%256)/255.0
- return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+extension UIColor{//返回随机颜色
+class var randomColor: UIColor {
+    get {
+        let red = CGFloat(arc4random()%256)/255.0
+        let green = CGFloat(arc4random()%256)/255.0
+        let blue = CGFloat(arc4random()%256)/255.0
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 }
-    }
+   }
 }
 extension ViewController : PingDelegate{
     func stop(_ ping: Ping) {
