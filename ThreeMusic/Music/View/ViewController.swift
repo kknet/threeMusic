@@ -325,6 +325,8 @@ class ViewController: UIViewController,MusicPlayView{
         
     self.musicPresenter.getCache(by: serch, by: page)
         
+        
+        
      }
     @IBAction func playSliderChanged(_ sender: Any) {
         
@@ -344,6 +346,27 @@ class ViewController: UIViewController,MusicPlayView{
             playButton .setImage(UIImage(named:self.presenter.playButtonColor), for: .normal)
 
      }
+    
+    
+    @IBAction func pushControllerButton(_ sender: Any) {
+        
+//        let controller = SerchViewController(nibName:"SerchViewController", bundle:nil)
+//        //详细界面出现的动画方式
+//        controller.modalTransitionStyle = .coverVertical
+//        //界面跳转
+//        self.present(controller, animated:true, completion:nil)
+//
+
+//
+                   let secondViewController = SerchViewController()
+
+                   self.navigationController?.pushViewController(secondViewController,animated:true)
+//
+//
+
+
+        
+    }
     // MARK:-EventTableView_header and footer
   
      @objc func headerRefresh(){
@@ -378,7 +401,8 @@ class ViewController: UIViewController,MusicPlayView{
         print("player==== \(player)")
         
         self.presenter.beginPlay()
-        self.playView.isHidden  = !self.presenter.model.isPlay
+        self.playView.isHidden  = false
+        
         self.playButton  .setImage(UIImage(named:self.presenter.playButtonColor ), for: .normal)
         self.avPlayer .playUrl(url: URL(string:self.model!.previewUrl!)!)
         let duration : CMTime = avPlayer.playerItem.asset.duration
@@ -397,14 +421,14 @@ class ViewController: UIViewController,MusicPlayView{
 
 }
 extension UIColor{//返回随机颜色
-class var randomColor: UIColor {
-    get {
-        let red = CGFloat(arc4random()%256)/255.0
-        let green = CGFloat(arc4random()%256)/255.0
-        let blue = CGFloat(arc4random()%256)/255.0
-        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+class var randomColor: UIColor{
+    get{
+        let red = CGFloat(arc4random()%256)/255.0
+        let green = CGFloat(arc4random()%256)/255.0
+        let blue = CGFloat(arc4random()%256)/255.0
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 }
-   }
+  }
 }
 extension ViewController : PingDelegate{
     func stop(_ ping: Ping) {
@@ -436,16 +460,16 @@ extension ViewController : PingDelegate{
             
             self.view.backgroundColor = UIColor.randomColor
 
-            
-//            self.view.backgroundColor = UIColor.randomColor
-            
             print(".... \(resultString)")
             
-
-//            let oldString = self.pingResultView.text ?? ""
-//            self.pingResultView.text = resultString + "\n" + oldString
         }
         
+//        DispatchQueue.global(qos: .userInitiated).async {
+//
+//        self.view.backgroundColor = UIColor.randomColor
+//
+//          print(".... \(resultString)")
+//        }
     }
     
 }
@@ -473,6 +497,7 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         self.model = arrMusicList![indexPath.row]
+        self.playView.isHidden  = false
         self.presenter.showMusicPlay()
     }
     
@@ -512,7 +537,6 @@ extension ViewController: UITextFieldDelegate {
           textField.resignFirstResponder()
           self.musicPresenter.pageLimit.limit = 1
           playTableView.mj_footer.resetNoMoreData()
-
           if (self.musicPresenter.serchString.string.count>0){
             self.musicPresenter.serchString.string = textField.text ?? ""
             reloadData(serch: self.musicPresenter.serchString.string, page: self.musicPresenter.pageLimit.limit)

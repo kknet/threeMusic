@@ -27,7 +27,7 @@ struct Modelclass {
   var wrapperType:String?
   var previewUrl:String?
   init() {
-    // 🚀 This is CacheModel
+   
   }
     
     static func fromJSON(_ dictionary: [String: Any]? ) -> [Modelclass]? {

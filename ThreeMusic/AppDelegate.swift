@@ -13,9 +13,19 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        //        把初始视图控制器压入导航视图控制器
+        let navigationController = UINavigationController(rootViewController: ViewController())
+        //        把根视图控制器设为导航视图控制器
+        self.window?.rootViewController = navigationController
+        //        渲染出页面
+        self.window?.makeKeyAndVisible()
+
+
         return true
     }
 

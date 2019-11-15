@@ -44,6 +44,12 @@
 		0A483376237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
 		0A483377237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
 		0A483378237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
+		0AA6E407237E4E470081CBDC /* SerchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6E405237E4E470081CBDC /* SerchViewController.swift */; };
+		0AA6E408237E4E470081CBDC /* SerchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6E405237E4E470081CBDC /* SerchViewController.swift */; };
+		0AA6E409237E4E470081CBDC /* SerchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6E405237E4E470081CBDC /* SerchViewController.swift */; };
+		0AA6E40A237E4E470081CBDC /* SerchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6E406237E4E470081CBDC /* SerchViewController.xib */; };
+		0AA6E40B237E4E470081CBDC /* SerchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6E406237E4E470081CBDC /* SerchViewController.xib */; };
+		0AA6E40C237E4E470081CBDC /* SerchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6E406237E4E470081CBDC /* SerchViewController.xib */; };
 		0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEC321D2375015300159117 /* MyTableViewCell.xib */; };
 		0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC321E2375015300159117 /* MyTableViewCell.swift */; };
 		0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC32332375617F00159117 /* PlayPresenter.swift */; };
@@ -98,6 +104,8 @@
 		0A48336A237AC35E0094CA84 /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ping.swift; sourceTree = "<group>"; };
 		0A48336B237AC35E0094CA84 /* PingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingResult.swift; sourceTree = "<group>"; };
 		0A48336C237AC35E0094CA84 /* PingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingManager.swift; sourceTree = "<group>"; };
+		0AA6E405237E4E470081CBDC /* SerchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchViewController.swift; sourceTree = "<group>"; };
+		0AA6E406237E4E470081CBDC /* SerchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerchViewController.xib; sourceTree = "<group>"; };
 		0AEC321D2375015300159117 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		0AEC321E2375015300159117 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		0AEC32332375617F00159117 /* PlayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPresenter.swift; sourceTree = "<group>"; };
@@ -303,8 +311,10 @@
 				0A04439C23793DE600393652 /* Player */,
 				0A04439723793A5400393652 /* PlayView */,
 				D55C82B523742D2500D8C78F /* Main.storyboard */,
+				0AA6E406237E4E470081CBDC /* SerchViewController.xib */,
 				D55C82BB23742D2700D8C78F /* Assets.xcassets */,
 				D55C82BD23742D2700D8C78F /* LaunchScreen.storyboard */,
+				0AA6E405237E4E470081CBDC /* SerchViewController.swift */,
 				D55C82C023742D2700D8C78F /* Info.plist */,
 				D55C82B823742D2500D8C78F /* ThreeMusic.xcdatamodeld */,
 			);
@@ -444,6 +454,7 @@
 				0A04436E2379045000393652 /* ic_p_zanting@3x.png in Resources */,
 				0AEC321F2375015300159117 /* MyTableViewCell.xib in Resources */,
 				0A0443772379045000393652 /* sousuo.png in Resources */,
+				0AA6E40A237E4E470081CBDC /* SerchViewController.xib in Resources */,
 				0A0443712379045000393652 /* ic_p_play@2x.png in Resources */,
 				D5EA6D2F237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */,
 				D55C82BC23742D2700D8C78F /* Assets.xcassets in Resources */,
@@ -458,6 +469,7 @@
 			files = (
 				D5EA6D30237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */,
 				0A04437B2379045000393652 /* ic_p_play@3x.png in Resources */,
+				0AA6E40B237E4E470081CBDC /* SerchViewController.xib in Resources */,
 				0A04436F2379045000393652 /* ic_p_zanting@3x.png in Resources */,
 				0A0443752379045000393652 /* ic_p_zanting@2x.png in Resources */,
 				0A0443722379045000393652 /* ic_p_play@2x.png in Resources */,
@@ -471,6 +483,7 @@
 			files = (
 				D5EA6D31237AEF0400F72A5D /* ic_xiaowei_my_logo@2x.png in Resources */,
 				0A04437C2379045000393652 /* ic_p_play@3x.png in Resources */,
+				0AA6E40C237E4E470081CBDC /* SerchViewController.xib in Resources */,
 				0A0443702379045000393652 /* ic_p_zanting@3x.png in Resources */,
 				0A0443762379045000393652 /* ic_p_zanting@2x.png in Resources */,
 				0A0443732379045000393652 /* ic_p_play@2x.png in Resources */,
@@ -619,6 +632,7 @@
 				0A04438E2379396500393652 /* Presenter.swift in Sources */,
 				D55C82B423742D2500D8C78F /* ViewController.swift in Sources */,
 				D55C82B023742D2500D8C78F /* AppDelegate.swift in Sources */,
+				0AA6E407237E4E470081CBDC /* SerchViewController.swift in Sources */,
 				D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */,
 				0A04438B2379396500393652 /* HTTPResponProtocol.swift in Sources */,
 				D55C82B223742D2500D8C78F /* SceneDelegate.swift in Sources */,
@@ -634,6 +648,7 @@
 				0A04438C2379396500393652 /* HTTPResponProtocol.swift in Sources */,
 				0A483371237AC35E0094CA84 /* Ping.swift in Sources */,
 				0A0443922379396500393652 /* HTTPClient.swift in Sources */,
+				0AA6E408237E4E470081CBDC /* SerchViewController.swift in Sources */,
 				0A483377237AC35F0094CA84 /* PingManager.swift in Sources */,
 				D55C82CA23742D2700D8C78F /* ThreeMusicTests.swift in Sources */,
 				0A483374237AC35E0094CA84 /* PingResult.swift in Sources */,
@@ -649,6 +664,7 @@
 				0A04438D2379396500393652 /* HTTPResponProtocol.swift in Sources */,
 				0A483372237AC35E0094CA84 /* Ping.swift in Sources */,
 				0A0443932379396500393652 /* HTTPClient.swift in Sources */,
+				0AA6E409237E4E470081CBDC /* SerchViewController.swift in Sources */,
 				0A483378237AC35F0094CA84 /* PingManager.swift in Sources */,
 				D55C82D523742D2700D8C78F /* ThreeMusicUITests.swift in Sources */,
 				0A483375237AC35E0094CA84 /* PingResult.swift in Sources */,
