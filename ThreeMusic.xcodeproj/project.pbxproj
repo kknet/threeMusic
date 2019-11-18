@@ -32,6 +32,9 @@
 		0A0443922379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
 		0A0443932379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
 		0A04439923793D2000393652 /* MusicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04439823793D2000393652 /* MusicDelegate.swift */; };
+		0A229CB52382AFFB0022365F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A229CB42382AFFB0022365F /* DataModel.swift */; };
+		0A229CB72382B04D0022365F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A229CB62382B04D0022365F /* UserInfo.swift */; };
+		0A229CB92382B8D80022365F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A229CB82382B8D80022365F /* CoreDataManager.swift */; };
 		0A2BA6BE238279A3007F630E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BA6BD238279A3007F630E /* KeychainManager.swift */; };
 		0A2BA6C4238294B5007F630E /* ThreeMusic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BA6C2238294B5007F630E /* ThreeMusic.xcdatamodeld */; };
 		0A48336D237AC35E0094CA84 /* ICMPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A483369237AC35E0094CA84 /* ICMPHeader.swift */; };
@@ -101,6 +104,9 @@
 		0A0443892379396400393652 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		0A04438A2379396500393652 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		0A04439823793D2000393652 /* MusicDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDelegate.swift; sourceTree = "<group>"; };
+		0A229CB42382AFFB0022365F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		0A229CB62382B04D0022365F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		0A229CB82382B8D80022365F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0A2BA6BD238279A3007F630E /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		0A2BA6C3238294B5007F630E /* ThreeMusic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThreeMusic.xcdatamodel; sourceTree = "<group>"; };
 		0A483369237AC35E0094CA84 /* ICMPHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMPHeader.swift; sourceTree = "<group>"; };
@@ -319,6 +325,9 @@
 				D55C82BD23742D2700D8C78F /* LaunchScreen.storyboard */,
 				0AA6E405237E4E470081CBDC /* SerchViewController.swift */,
 				0A2BA6BD238279A3007F630E /* KeychainManager.swift */,
+				0A229CB42382AFFB0022365F /* DataModel.swift */,
+				0A229CB82382B8D80022365F /* CoreDataManager.swift */,
+				0A229CB62382B04D0022365F /* UserInfo.swift */,
 				D55C82C023742D2700D8C78F /* Info.plist */,
 			);
 			path = ThreeMusic;
@@ -626,10 +635,12 @@
 				0A0443912379396500393652 /* HTTPClient.swift in Sources */,
 				0A483370237AC35E0094CA84 /* Ping.swift in Sources */,
 				0A2BA6BE238279A3007F630E /* KeychainManager.swift in Sources */,
+				0A229CB52382AFFB0022365F /* DataModel.swift in Sources */,
 				0A48336D237AC35E0094CA84 /* ICMPHeader.swift in Sources */,
 				0A04439923793D2000393652 /* MusicDelegate.swift in Sources */,
 				0A483376237AC35F0094CA84 /* PingManager.swift in Sources */,
 				0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */,
+				0A229CB92382B8D80022365F /* CoreDataManager.swift in Sources */,
 				0A483373237AC35E0094CA84 /* PingResult.swift in Sources */,
 				0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */,
 				0A04438E2379396500393652 /* Presenter.swift in Sources */,
@@ -639,6 +650,7 @@
 				0A2BA6C4238294B5007F630E /* ThreeMusic.xcdatamodeld in Sources */,
 				D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */,
 				0A04438B2379396500393652 /* HTTPResponProtocol.swift in Sources */,
+				0A229CB72382B04D0022365F /* UserInfo.swift in Sources */,
 				D55C82B223742D2500D8C78F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
