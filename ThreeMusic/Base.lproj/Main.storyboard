@@ -87,10 +87,10 @@
                                     <action selector="animateButtonciclk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THh-YU-ZD6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czm-tv-N3a">
-                                <rect key="frame" x="278" y="778" width="100" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="前进"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czm-tv-N3a" userLabel="下一页">
+                                <rect key="frame" x="294" y="771" width="100" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="下一页"/>
                                 <connections>
                                     <action selector="pushControllerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EhZ-gI-QnA"/>
                                 </connections>
