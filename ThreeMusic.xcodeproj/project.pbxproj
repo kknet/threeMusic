@@ -32,6 +32,8 @@
 		0A0443922379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
 		0A0443932379396500393652 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04438A2379396500393652 /* HTTPClient.swift */; };
 		0A04439923793D2000393652 /* MusicDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A04439823793D2000393652 /* MusicDelegate.swift */; };
+		0A2BA6BE238279A3007F630E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BA6BD238279A3007F630E /* KeychainManager.swift */; };
+		0A2BA6C4238294B5007F630E /* ThreeMusic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BA6C2238294B5007F630E /* ThreeMusic.xcdatamodeld */; };
 		0A48336D237AC35E0094CA84 /* ICMPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A483369237AC35E0094CA84 /* ICMPHeader.swift */; };
 		0A48336E237AC35E0094CA84 /* ICMPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A483369237AC35E0094CA84 /* ICMPHeader.swift */; };
 		0A48336F237AC35E0094CA84 /* ICMPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A483369237AC35E0094CA84 /* ICMPHeader.swift */; };
@@ -61,7 +63,6 @@
 		D55C82B223742D2500D8C78F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82B123742D2500D8C78F /* SceneDelegate.swift */; };
 		D55C82B423742D2500D8C78F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82B323742D2500D8C78F /* ViewController.swift */; };
 		D55C82B723742D2500D8C78F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55C82B523742D2500D8C78F /* Main.storyboard */; };
-		D55C82BA23742D2500D8C78F /* ThreeMusic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D55C82B823742D2500D8C78F /* ThreeMusic.xcdatamodeld */; };
 		D55C82BC23742D2700D8C78F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55C82BB23742D2700D8C78F /* Assets.xcassets */; };
 		D55C82BF23742D2700D8C78F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55C82BD23742D2700D8C78F /* LaunchScreen.storyboard */; };
 		D55C82CA23742D2700D8C78F /* ThreeMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55C82C923742D2700D8C78F /* ThreeMusicTests.swift */; };
@@ -100,6 +101,8 @@
 		0A0443892379396400393652 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		0A04438A2379396500393652 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		0A04439823793D2000393652 /* MusicDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDelegate.swift; sourceTree = "<group>"; };
+		0A2BA6BD238279A3007F630E /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		0A2BA6C3238294B5007F630E /* ThreeMusic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThreeMusic.xcdatamodel; sourceTree = "<group>"; };
 		0A483369237AC35E0094CA84 /* ICMPHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICMPHeader.swift; sourceTree = "<group>"; };
 		0A48336A237AC35E0094CA84 /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ping.swift; sourceTree = "<group>"; };
 		0A48336B237AC35E0094CA84 /* PingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingResult.swift; sourceTree = "<group>"; };
@@ -124,7 +127,6 @@
 		D55C82B123742D2500D8C78F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D55C82B323742D2500D8C78F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D55C82B623742D2500D8C78F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D55C82B923742D2500D8C78F /* ThreeMusic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThreeMusic.xcdatamodel; sourceTree = "<group>"; };
 		D55C82BB23742D2700D8C78F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D55C82BE23742D2700D8C78F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D55C82C023742D2700D8C78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		D55C82AE23742D2500D8C78F /* ThreeMusic */ = {
 			isa = PBXGroup;
 			children = (
+				0A2BA6C2238294B5007F630E /* ThreeMusic.xcdatamodeld */,
 				0A483368237AC3510094CA84 /* PingManager */,
 				D55C82AF23742D2500D8C78F /* AppDelegate.swift */,
 				D55C82B123742D2500D8C78F /* SceneDelegate.swift */,
@@ -315,8 +318,8 @@
 				D55C82BB23742D2700D8C78F /* Assets.xcassets */,
 				D55C82BD23742D2700D8C78F /* LaunchScreen.storyboard */,
 				0AA6E405237E4E470081CBDC /* SerchViewController.swift */,
+				0A2BA6BD238279A3007F630E /* KeychainManager.swift */,
 				D55C82C023742D2700D8C78F /* Info.plist */,
-				D55C82B823742D2500D8C78F /* ThreeMusic.xcdatamodeld */,
 			);
 			path = ThreeMusic;
 			sourceTree = "<group>";
@@ -622,10 +625,10 @@
 				0AEC323623757D7500159117 /* PlayerModel.swift in Sources */,
 				0A0443912379396500393652 /* HTTPClient.swift in Sources */,
 				0A483370237AC35E0094CA84 /* Ping.swift in Sources */,
+				0A2BA6BE238279A3007F630E /* KeychainManager.swift in Sources */,
 				0A48336D237AC35E0094CA84 /* ICMPHeader.swift in Sources */,
 				0A04439923793D2000393652 /* MusicDelegate.swift in Sources */,
 				0A483376237AC35F0094CA84 /* PingManager.swift in Sources */,
-				D55C82BA23742D2500D8C78F /* ThreeMusic.xcdatamodeld in Sources */,
 				0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */,
 				0A483373237AC35E0094CA84 /* PingResult.swift in Sources */,
 				0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */,
@@ -633,6 +636,7 @@
 				D55C82B423742D2500D8C78F /* ViewController.swift in Sources */,
 				D55C82B023742D2500D8C78F /* AppDelegate.swift in Sources */,
 				0AA6E407237E4E470081CBDC /* SerchViewController.swift in Sources */,
+				0A2BA6C4238294B5007F630E /* ThreeMusic.xcdatamodeld in Sources */,
 				D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */,
 				0A04438B2379396500393652 /* HTTPResponProtocol.swift in Sources */,
 				D55C82B223742D2500D8C78F /* SceneDelegate.swift in Sources */,
@@ -982,12 +986,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D55C82B823742D2500D8C78F /* ThreeMusic.xcdatamodeld */ = {
+		0A2BA6C2238294B5007F630E /* ThreeMusic.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D55C82B923742D2500D8C78F /* ThreeMusic.xcdatamodel */,
+				0A2BA6C3238294B5007F630E /* ThreeMusic.xcdatamodel */,
 			);
-			currentVersion = D55C82B923742D2500D8C78F /* ThreeMusic.xcdatamodel */;
+			currentVersion = 0A2BA6C3238294B5007F630E /* ThreeMusic.xcdatamodel */;
 			path = ThreeMusic.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

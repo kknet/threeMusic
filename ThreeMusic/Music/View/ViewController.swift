@@ -24,15 +24,12 @@ class ViewController: UIViewController,MusicPlayView{
     
     
     var presenter : PlayPresenter!
-    
     var model : Modelclass!
  
     @IBOutlet weak var playView: UIView!
     @IBOutlet weak var playTableView: UITableView!
     @IBOutlet weak var serchTextField: UITextField!
-    
     @IBOutlet weak var playButton: UIButton!
-    
     @IBOutlet weak var playLabel: UILabel!
     @IBOutlet weak var playSlider: UISlider!
     @IBOutlet weak var animaButton: UIButton!
@@ -58,24 +55,8 @@ class ViewController: UIViewController,MusicPlayView{
         
         self.animaButton.isSelected = false
         
-        
-//        let ipContent = "www.google.com"
-//        if let ipArray = ipContent.components(separatedBy: ","){
-//                 for ip in ipArray{
-                     let ping = Ping()
-                     ping.delegate = self
-                     ping.host = "www.google.com"
-                     PingMannager.shared.add(ping)
-//                 }
-//             }
-//             self.timeout = TimeInterval(self.timeoutTextField.text ?? self.timeout.description)!
-//             self.period = TimeInterval(self.periodTextField.text ?? self.period.description)!
-             PingMannager.shared.setup {
-//                 PingMannager.shared.timeout = self.timeout
-                 PingMannager.shared.pingPeriod = 1
-                 PingMannager.shared.startPing()
-             }
-             
+//       pingtest()
+
         //同步+并发
 //        self.syncConcurrent()
         //异步+并发
@@ -85,9 +66,7 @@ class ViewController: UIViewController,MusicPlayView{
         
         //异步+串行
 //        self.asyncSerial()
-        
-        
-        
+
 //        playAnimation()
 //        self.aMove()
         
@@ -101,17 +80,34 @@ class ViewController: UIViewController,MusicPlayView{
         if self.animaButton.isSelected{
             self.imageView.layer.removeAllAnimations()
             self.animaButton.isSelected = false
-//            self.animaButton.titleLabel?.text = "开始动画"
             self.animaButton.setTitle("开始动画", for: .normal)
 
         }else{
             self.aMove()
-
             self.animaButton.isSelected = true
             self.animaButton.setTitle("结束动画", for: .normal)
         }
         
     }
+    func pingtest()  {
+         //        let ipContent = "www.google.com"
+         //        if let ipArray = ipContent.components(separatedBy: ","){
+         //                 for ip in ipArray{
+                              let ping = Ping()
+                              ping.delegate = self
+                              ping.host = "www.google.com"
+                              PingMannager.shared.add(ping)
+         //                 }
+         //             }
+         //             self.timeout = TimeInterval(self.timeoutTextField.text ?? self.timeout.description)!
+         //             self.period = TimeInterval(self.periodTextField.text ?? self.period.description)!
+                      PingMannager.shared.setup {
+         //                 PingMannager.shared.timeout = self.timeout
+                          PingMannager.shared.pingPeriod = 1
+                          PingMannager.shared.startPing()
+                      }
+                      
+     }
     func aMove() {
         
         let ball = self.imageView
@@ -194,7 +190,6 @@ class ViewController: UIViewController,MusicPlayView{
                 Thread.sleep(forTimeInterval: 2)
                 print("线程1运行---%@",Thread.current)
             }
-            
         }
         
         queue.sync {
@@ -356,11 +351,8 @@ class ViewController: UIViewController,MusicPlayView{
 //        //界面跳转
 //        self.present(controller, animated:true, completion:nil)
 //
-
-//
-                   let secondViewController = SerchViewController()
-
-                   self.navigationController?.pushViewController(secondViewController,animated:true)
+            let secondViewController = SerchViewController()
+            self.navigationController?.pushViewController(secondViewController,animated:true)
 //
 //
 
@@ -399,10 +391,8 @@ class ViewController: UIViewController,MusicPlayView{
        
     func musicPlayer(player: String) {
         print("player==== \(player)")
-        
         self.presenter.beginPlay()
         self.playView.isHidden  = false
-        
         self.playButton  .setImage(UIImage(named:self.presenter.playButtonColor ), for: .normal)
         self.avPlayer .playUrl(url: URL(string:self.model!.previewUrl!)!)
         let duration : CMTime = avPlayer.playerItem.asset.duration
@@ -454,6 +444,8 @@ extension ViewController : PingDelegate{
         }else{
             resultString = "Host:\(result.host ?? "") failed"
         }
+        
+        
         Thread.sleep(forTimeInterval: 5)
 
         DispatchQueue.main.async {

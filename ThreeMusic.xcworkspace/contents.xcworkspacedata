@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ThreeMusic/Person+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:ThreeMusic/Person+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:ThreeMusic.xcodeproj">
    </FileRef>
    <FileRef

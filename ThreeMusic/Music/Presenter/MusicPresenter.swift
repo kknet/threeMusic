@@ -25,6 +25,7 @@ struct MusicPresenter <U> where U: MusicProtocol {
 
   var view: U?
   mutating func initial(_ view: U) {
+    
     self.view = view
     self.httpClient = HTTPClient(handle: self )
     
