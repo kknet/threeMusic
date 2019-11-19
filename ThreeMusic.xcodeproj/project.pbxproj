@@ -49,6 +49,14 @@
 		0A483376237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
 		0A483377237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
 		0A483378237AC35F0094CA84 /* PingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48336C237AC35E0094CA84 /* PingManager.swift */; };
+		0A7417C223837CF100586A83 /* SqlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7417C123837CF100586A83 /* SqlModel.swift */; };
+		0A7417CA23837DB700586A83 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7417C923837DB700586A83 /* libsqlite3.0.tbd */; };
+		0A7417D92383851300586A83 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7417CF2383851300586A83 /* FMDatabaseQueue.m */; };
+		0A7417DA2383851300586A83 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7417D22383851300586A83 /* FMDatabaseAdditions.m */; };
+		0A7417DB2383851300586A83 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7417D32383851300586A83 /* FMDatabase.m */; };
+		0A7417DC2383851300586A83 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7417D72383851300586A83 /* FMDatabasePool.m */; };
+		0A7417DD2383851300586A83 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7417D82383851300586A83 /* FMResultSet.m */; };
+		0A7417DF2383F03700586A83 /* xw.db in Resources */ = {isa = PBXBuildFile; fileRef = 0A7417DE2383F03700586A83 /* xw.db */; };
 		0AA6E407237E4E470081CBDC /* SerchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6E405237E4E470081CBDC /* SerchViewController.swift */; };
 		0AA6E408237E4E470081CBDC /* SerchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6E405237E4E470081CBDC /* SerchViewController.swift */; };
 		0AA6E409237E4E470081CBDC /* SerchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6E405237E4E470081CBDC /* SerchViewController.swift */; };
@@ -113,6 +121,20 @@
 		0A48336A237AC35E0094CA84 /* Ping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ping.swift; sourceTree = "<group>"; };
 		0A48336B237AC35E0094CA84 /* PingResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingResult.swift; sourceTree = "<group>"; };
 		0A48336C237AC35E0094CA84 /* PingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingManager.swift; sourceTree = "<group>"; };
+		0A7417C123837CF100586A83 /* SqlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlModel.swift; sourceTree = "<group>"; };
+		0A7417C923837DB700586A83 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		0A7417CE2383851300586A83 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		0A7417CF2383851300586A83 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		0A7417D02383851300586A83 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		0A7417D12383851300586A83 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		0A7417D22383851300586A83 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0A7417D32383851300586A83 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		0A7417D42383851300586A83 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		0A7417D52383851300586A83 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		0A7417D62383851300586A83 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0A7417D72383851300586A83 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		0A7417D82383851300586A83 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		0A7417DE2383F03700586A83 /* xw.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = xw.db; sourceTree = "<group>"; };
 		0AA6E405237E4E470081CBDC /* SerchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchViewController.swift; sourceTree = "<group>"; };
 		0AA6E406237E4E470081CBDC /* SerchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerchViewController.xib; sourceTree = "<group>"; };
 		0AEC321D2375015300159117 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
@@ -152,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A7417CA23837DB700586A83 /* libsqlite3.0.tbd in Frameworks */,
 				2AB05AC27D0EB5EC97A5EC5E /* Pods_ThreeMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +285,28 @@
 			path = PingManager;
 			sourceTree = "<group>";
 		};
+		0A7417CD2383851300586A83 /* FMData */ = {
+			isa = PBXGroup;
+			children = (
+				0A7417CE2383851300586A83 /* FMDatabase.h */,
+				0A7417CF2383851300586A83 /* FMDatabaseQueue.m */,
+				0A7417D02383851300586A83 /* FMResultSet.h */,
+				0A7417D12383851300586A83 /* FMDatabasePool.h */,
+				0A7417D22383851300586A83 /* FMDatabaseAdditions.m */,
+				0A7417D32383851300586A83 /* FMDatabase.m */,
+				0A7417D42383851300586A83 /* FMDatabaseQueue.h */,
+				0A7417D52383851300586A83 /* FMDB.h */,
+				0A7417D62383851300586A83 /* FMDatabaseAdditions.h */,
+				0A7417D72383851300586A83 /* FMDatabasePool.m */,
+				0A7417D82383851300586A83 /* FMResultSet.m */,
+			);
+			path = FMData;
+			sourceTree = "<group>";
+		};
 		2FE1C29DA28F0C0626476F42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A7417C923837DB700586A83 /* libsqlite3.0.tbd */,
 				0F04B8FFADE8BD4588BF1777 /* Pods_ThreeMusic.framework */,
 				6EB8D8CC924319CAA053A021 /* Pods_ThreeMusic_ThreeMusicUITests.framework */,
 				4CEE3A2A96B2ECA7928BAC5F /* Pods_ThreeMusicTests.framework */,
@@ -323,11 +365,14 @@
 				0AA6E406237E4E470081CBDC /* SerchViewController.xib */,
 				D55C82BB23742D2700D8C78F /* Assets.xcassets */,
 				D55C82BD23742D2700D8C78F /* LaunchScreen.storyboard */,
+				0A7417DE2383F03700586A83 /* xw.db */,
 				0AA6E405237E4E470081CBDC /* SerchViewController.swift */,
 				0A2BA6BD238279A3007F630E /* KeychainManager.swift */,
 				0A229CB42382AFFB0022365F /* DataModel.swift */,
 				0A229CB82382B8D80022365F /* CoreDataManager.swift */,
+				0A7417C123837CF100586A83 /* SqlModel.swift */,
 				0A229CB62382B04D0022365F /* UserInfo.swift */,
+				0A7417CD2383851300586A83 /* FMData */,
 				D55C82C023742D2700D8C78F /* Info.plist */,
 			);
 			path = ThreeMusic;
@@ -461,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A7417DF2383F03700586A83 /* xw.db in Resources */,
 				0A04437A2379045000393652 /* ic_p_play@3x.png in Resources */,
 				D55C82BF23742D2700D8C78F /* LaunchScreen.storyboard in Resources */,
 				0A04436E2379045000393652 /* ic_p_zanting@3x.png in Resources */,
@@ -632,20 +678,26 @@
 			files = (
 				D55C82EB2374342E00D8C78F /* MusicPresenter.swift in Sources */,
 				0AEC323623757D7500159117 /* PlayerModel.swift in Sources */,
+				0A7417DD2383851300586A83 /* FMResultSet.m in Sources */,
 				0A0443912379396500393652 /* HTTPClient.swift in Sources */,
 				0A483370237AC35E0094CA84 /* Ping.swift in Sources */,
+				0A7417DA2383851300586A83 /* FMDatabaseAdditions.m in Sources */,
 				0A2BA6BE238279A3007F630E /* KeychainManager.swift in Sources */,
 				0A229CB52382AFFB0022365F /* DataModel.swift in Sources */,
 				0A48336D237AC35E0094CA84 /* ICMPHeader.swift in Sources */,
 				0A04439923793D2000393652 /* MusicDelegate.swift in Sources */,
+				0A7417C223837CF100586A83 /* SqlModel.swift in Sources */,
 				0A483376237AC35F0094CA84 /* PingManager.swift in Sources */,
 				0AEC32342375617F00159117 /* PlayPresenter.swift in Sources */,
 				0A229CB92382B8D80022365F /* CoreDataManager.swift in Sources */,
+				0A7417DC2383851300586A83 /* FMDatabasePool.m in Sources */,
 				0A483373237AC35E0094CA84 /* PingResult.swift in Sources */,
 				0AEC32202375015300159117 /* MyTableViewCell.swift in Sources */,
+				0A7417DB2383851300586A83 /* FMDatabase.m in Sources */,
 				0A04438E2379396500393652 /* Presenter.swift in Sources */,
 				D55C82B423742D2500D8C78F /* ViewController.swift in Sources */,
 				D55C82B023742D2500D8C78F /* AppDelegate.swift in Sources */,
+				0A7417D92383851300586A83 /* FMDatabaseQueue.m in Sources */,
 				0AA6E407237E4E470081CBDC /* SerchViewController.swift in Sources */,
 				0A2BA6C4238294B5007F630E /* ThreeMusic.xcdatamodeld in Sources */,
 				D55C82E723742ED700D8C78F /* MusicModel.swift in Sources */,
@@ -842,6 +894,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KS79R82X5P;
 				INFOPLIST_FILE = ThreeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -849,6 +902,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = M800.ThreeMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -860,6 +914,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KS79R82X5P;
 				INFOPLIST_FILE = ThreeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -867,6 +922,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = M800.ThreeMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

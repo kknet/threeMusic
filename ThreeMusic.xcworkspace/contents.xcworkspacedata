@@ -5,6 +5,9 @@
       location = "group:ThreeMusic/Person+CoreDataClass.swift">
    </FileRef>
    <FileRef
+      location = "group:/Users/chenweiwen/Desktop/work/mvp/Bridging-Header.h">
+   </FileRef>
+   <FileRef
       location = "group:ThreeMusic/Person+CoreDataProperties.swift">
    </FileRef>
    <FileRef

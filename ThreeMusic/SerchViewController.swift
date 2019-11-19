@@ -7,17 +7,17 @@
 //
 
 import UIKit
-//import Security
 import Security
 import CoreData
 
 
 
-class SerchViewController: UIViewController {
+class SerchViewController: UIViewController ,UITextViewDelegate{
 
     
     var dataArray: [Person] = [Person]()
-
+    var sqlArray   = [sqlModel]()
+   
        var dataModel = DataModel()
     let userDefault = UserDefaults()
     @IBAction func buttonBack(_ sender: Any) {
@@ -33,20 +33,52 @@ class SerchViewController: UIViewController {
    
     
  
+    @IBOutlet weak var p_TableView: UITableView!
     override func viewDidLoad() {
         //keychain
         keychaintest()
 
         onCreateData()
         
+        p_TableView.dataSource = self as? UITableViewDataSource
+        p_TableView.delegate = self as? UITableViewDelegate
+        p_TableView.register(UINib.init(nibName: "MyTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "mycell")
+        
+        userDefaultTextView.delegate = self
+        sqltest()
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func sqlReadButtonCiclk(_ sender: Any) {
+          sqltest()
     
+        p_TableView .reloadData()
+    }
+    @IBAction func sqldelButtonCiclk(_ sender: Any) {
     
+    //SELECT * FROM vst_tvdata WHERE vst_cid&2 >= 2 order by vst_num asc
+        let sql = "DELETE FROM vst_tvdata WHERE vst_vid =" + userDefaultTextView.text
+        let db = getDb()
+        db.open()
+//        db.executeUpdate(sql, withArgumentsInArray: [10133])
+//        db.executeUpdate(sql, withArgumentsIn: [10133])
+        db.executeUpdate(sql, withArgumentsIn: [userDefaultTextView.text])
+        db.close()
     
+    }
+    @IBAction func sqlAddButtonCiclk(_ sender: Any) {
+        
+        let sql="INSERT INTO vst_tvdata(vst_title,vst_vid,vst_hide,vst_cid)"+"VALUES(?,?,?,?)"
+        let db = getDb()
+        db.open()
+        db.executeUpdate(sql, withArgumentsIn: ["vimen","10000",0,2])
+        db.close()
+        
+        
+    }
     @IBAction func coreDatereloadButtonCiclk(_ sender: Any) {
         
 //        dataArray = CoreDataManager.shared.getAllPerson()
@@ -89,7 +121,73 @@ class SerchViewController: UIViewController {
         
         
     }
+    func getDb()->FMDatabase{
+        
+        let bundleDBPath:String? = Bundle.main.path(forResource: "xw", ofType: "db")
+
+        print("bundleDBPath ==  \(bundleDBPath)")
+             
+        let fileManager = FileManager.default
+        let file = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first
+      
+        let fileName = "/wx.db"
+        let path = file! + fileName
+        print("path  \(path)")
+//        fileManager.createFile(atPath: bundleDBPath, contents:nil, attributes:nil)
+
+        if(fileManager.fileExists(atPath: path) == false ){
+        do{
+        try fileManager.copyItem(atPath: bundleDBPath!, toPath: path)
+          print("Success to copy file.")
+        }catch{
+            print("Failed to copy file.")
+            }
+            
+        }
+        
+        
+//     let fileManager = FileManager.default
+//             do{
+//                 try fileManager.copyItem(atPath: sourceUrl, toPath: targetUrl)
+//                 print("Success to copy file.")
+//             }catch{
+//                 print("Failed to copy file.")
+//             }
+     
+    
+        
+
+         let feedlogDb = FMDatabase(path: path)
+
+        return feedlogDb!
+    }
+    
+    func sqltest()  {
+
+        let db = getDb()
+        db.open()
+     
+        let reddb2 :FMResultSet = (db.executeQuery("SELECT * FROM vst_tvdata WHERE vst_cid&2 >= 2 order by vst_num asc" , withArgumentsIn: []))!
+//
+        sqlArray.removeAll()
+        print("reddb2  = \(reddb2)")
+        while (reddb2.next()) {
+            var model = sqlModel()
+            model.vst_title = reddb2.string(forColumn: "vst_title")
+            model.vst_vid  = reddb2.string(forColumn: "vst_vid")
+            model.vst_hide = reddb2.string(forColumn: "vst_hide")
+            model.vst_cid = reddb2.string(forColumn: "vst_cid")
+            sqlArray.append(model)
+            print("vst_title  \(model.vst_title )")
+        }
+        db.close()
+//        sqlDb.close()
+
+
+        
+    }
     func onCreateData(){
+        
         dataModel.userList.append(UserInfo(name: "张三", phone: "1234"))
         dataModel.userList.append(UserInfo(name: "李四", phone: "1212"))
         dataModel.userList.append(UserInfo(name: "航歌", phone: "3525"))
@@ -139,7 +237,8 @@ class SerchViewController: UIViewController {
                 userDefault.setValue(userDefaultTextView.text, forKey: "Message")
         }
         @IBAction func readButtonCiclk(_ sender: Any) {
-            
+            userDefaultTextView.resignFirstResponder()
+
             userDefaultLabel.text  = userDefault.value(forKey: "Message") as? String
         }
         
@@ -183,5 +282,59 @@ class SerchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+ 
 
 }
+
+
+// MARK:- UITableViewDataSource
+ extension SerchViewController: UITableViewDataSource {
+
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+      let counts = self.sqlArray.count
+      
+        return counts
+        
+    }
+     
+     func tableView(_ tableView:UITableView, heightForRowAt indexPath:IndexPath) ->CGFloat {
+               
+        return MyTableViewCell.height
+
+      
+     }
+         
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         
+         let oneModel = self.sqlArray[indexPath.row]
+         guard let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier) as? MyTableViewCell else { return UITableViewCell() }
+         cell.setup(titleName:oneModel.vst_title!,subtitleName:oneModel.vst_vid!)
+         return cell
+
+         }
+     }
+ 
+extension SerchViewController: UITableViewDelegate {
+
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+    print("\(indexPath.row)")
+//    self.model = arrMusicList![indexPath.row]
+//    self.playView.isHidden  = false
+//    self.presenter.showMusicPlay()
+}
+
+}
+extension SerchViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          //收起键盘
+          textField.resignFirstResponder()
+    
+          return true;
+      }
+
+    
+}
+
+
